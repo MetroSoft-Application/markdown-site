@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>architecture</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">architecture</h1>
+</header>
+<h1 id="アーキテクチャ">🏗️ アーキテクチャ</h1>
+<figure>
+<img src="./images/architecture-diagram.png" alt="アーキテクチャ図" />
+<figcaption aria-hidden="true">アーキテクチャ図</figcaption>
+</figure>
+<h2 id="システム概要">システム概要</h2>
+<p>このシステムは以下のコンポーネントで構成されています。</p>
+<h2 id="コンポーネント構成">コンポーネント構成</h2>
+<h3 id="フロントエンド">フロントエンド</h3>
+<ul>
+<li>React.js ベースのユーザーインターフェース</li>
+<li>TypeScript による型安全性</li>
+</ul>
+<h3 id="バックエンド">バックエンド</h3>
+<ul>
+<li>Node.js + Express サーバー</li>
+<li>REST API エンドポイント</li>
+</ul>
+<p>詳細なAPI仕様は <a href="./api-reference.html">API仕様</a>
+を参照してください。</p>
+<h3 id="データベース">データベース</h3>
+<ul>
+<li>PostgreSQL によるデータ永続化</li>
+<li>Redis によるキャッシュ機能</li>
+</ul>
+<figure>
+<img src="./images/data-flow.png" alt="データフロー図" />
+<figcaption aria-hidden="true">データフロー図</figcaption>
+</figure>
+<h2 id="セキュリティ">セキュリティ</h2>
+<ul>
+<li>JWT トークンによる認証</li>
+<li>HTTPS 通信の強制</li>
+<li>CORS ポリシーの適用</li>
+</ul>
+<h2 id="パフォーマンス">パフォーマンス</h2>
+<p>パフォーマンス最適化の詳細は <a
+href="./developer-guide.md#パフォーマンス最適化">開発者ガイド</a>
+を参照してください。</p>
+<h2 id="デプロイメント">デプロイメント</h2>
+<figure>
+<img src="./images/deployment-diagram.png" alt="デプロイメント図" />
+<figcaption aria-hidden="true">デプロイメント図</figcaption>
+</figure>
+<hr />
+<h2 id="ナビゲーション">ナビゲーション</h2>
+<ul>
+<li><a href="./README.html">🏠 ホーム</a></li>
+<li><a href="./overview.html">📋 概要</a></li>
+<li><a href="./api-reference.html">🔧 API仕様</a></li>
+<li><a href="./developer-guide.html">👥 開発者ガイド</a></li>
+</ul>
+</body>
+</html>
