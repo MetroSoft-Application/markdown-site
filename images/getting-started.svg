@@ -1,0 +1,88 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- タイトル -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="24" fill="#28a745" text-anchor="middle" font-weight="bold">
+    🚀 クイックスタートガイド
+  </text>
+  
+  <!-- ステップ1 -->
+  <circle cx="80" cy="100" r="25" fill="#007bff" stroke="#ffffff" stroke-width="3"/>
+  <text x="80" y="108" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">1</text>
+  <rect x="120" y="80" width="200" height="40" fill="#e7f3ff" stroke="#007bff" stroke-width="2" rx="5"/>
+  <text x="220" y="105" font-family="Arial, sans-serif" font-size="14" fill="#007bff" text-anchor="middle" font-weight="bold">
+    プロジェクトのクローン
+  </text>
+  
+  <!-- ステップ2 -->
+  <circle cx="80" cy="180" r="25" fill="#28a745" stroke="#ffffff" stroke-width="3"/>
+  <text x="80" y="188" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">2</text>
+  <rect x="120" y="160" width="200" height="40" fill="#e8f5e8" stroke="#28a745" stroke-width="2" rx="5"/>
+  <text x="220" y="185" font-family="Arial, sans-serif" font-size="14" fill="#28a745" text-anchor="middle" font-weight="bold">
+    依存関係のインストール
+  </text>
+  
+  <!-- ステップ3 -->
+  <circle cx="80" cy="260" r="25" fill="#ffc107" stroke="#ffffff" stroke-width="3"/>
+  <text x="80" y="268" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">3</text>
+  <rect x="120" y="240" width="200" height="40" fill="#fff8e1" stroke="#ffc107" stroke-width="2" rx="5"/>
+  <text x="220" y="265" font-family="Arial, sans-serif" font-size="14" fill="#f57c00" text-anchor="middle" font-weight="bold">
+    設定ファイルの作成
+  </text>
+  
+  <!-- ステップ4 -->
+  <circle cx="80" cy="340" r="25" fill="#dc3545" stroke="#ffffff" stroke-width="3"/>
+  <text x="80" y="348" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" font-weight="bold">4</text>
+  <rect x="120" y="320" width="200" height="40" fill="#ffeaea" stroke="#dc3545" stroke-width="2" rx="5"/>
+  <text x="220" y="345" font-family="Arial, sans-serif" font-size="14" fill="#dc3545" text-anchor="middle" font-weight="bold">
+    アプリケーション起動
+  </text>
+  
+  <!-- 右側のコマンド例 -->
+  <rect x="360" y="80" width="220" height="280" fill="#2d3748" stroke="#4a5568" stroke-width="2" rx="5"/>
+  <text x="470" y="105" font-family="monospace" font-size="12" fill="#68d391" text-anchor="middle" font-weight="bold">
+    Terminal Commands
+  </text>
+  
+  <text x="375" y="130" font-family="monospace" font-size="10" fill="#e2e8f0">
+    $ git clone project.git
+  </text>
+  <text x="375" y="145" font-family="monospace" font-size="10" fill="#e2e8f0">
+    $ cd project
+  </text>
+  
+  <text x="375" y="170" font-family="monospace" font-size="10" fill="#e2e8f0">
+    $ npm install
+  </text>
+  
+  <text x="375" y="205" font-family="monospace" font-size="10" fill="#e2e8f0">
+    $ cp .env.example .env
+  </text>
+  <text x="375" y="220" font-family="monospace" font-size="10" fill="#e2e8f0">
+    $ nano .env
+  </text>
+  
+  <text x="375" y="255" font-family="monospace" font-size="10" fill="#e2e8f0">
+    $ npm start
+  </text>
+  
+  <text x="375" y="290" font-family="monospace" font-size="10" fill="#68d391">
+    ✅ Server running on
+  </text>
+  <text x="375" y="305" font-family="monospace" font-size="10" fill="#68d391">
+    http://localhost:3000
+  </text>
+  
+  <!-- 接続線 -->
+  <path d="M 105 100 L 120 100" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 105 180 L 120 180" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 105 260 L 120 260" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 105 340 L 120 340" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 矢印の定義 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+  </defs>
+</svg>

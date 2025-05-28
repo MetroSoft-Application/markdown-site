@@ -1,0 +1,80 @@
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="500" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
+  
+  <!-- タイトル -->
+  <text x="350" y="30" font-family="Arial, sans-serif" font-size="24" fill="#212529" text-anchor="middle" font-weight="bold">
+    システム構成図
+  </text>
+  
+  <!-- フロントエンド層 -->
+  <rect x="50" y="70" width="600" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
+  <text x="350" y="95" font-family="Arial, sans-serif" font-size="16" fill="#1976d2" text-anchor="middle" font-weight="bold">
+    フロントエンド層
+  </text>
+  <text x="150" y="120" font-family="Arial, sans-serif" font-size="12" fill="#1976d2" text-anchor="middle">
+    📄 Markdown Viewer
+  </text>
+  <text x="350" y="120" font-family="Arial, sans-serif" font-size="12" fill="#1976d2" text-anchor="middle">
+    🔗 Link Navigator
+  </text>
+  <text x="550" y="120" font-family="Arial, sans-serif" font-size="12" fill="#1976d2" text-anchor="middle">
+    🖼️ Image Renderer
+  </text>
+  
+  <!-- API層 -->
+  <rect x="50" y="180" width="600" height="80" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="10"/>
+  <text x="350" y="205" font-family="Arial, sans-serif" font-size="16" fill="#388e3c" text-anchor="middle" font-weight="bold">
+    API層
+  </text>
+  <text x="200" y="230" font-family="Arial, sans-serif" font-size="12" fill="#388e3c" text-anchor="middle">
+    📡 REST API
+  </text>
+  <text x="350" y="230" font-family="Arial, sans-serif" font-size="12" fill="#388e3c" text-anchor="middle">
+    🔍 Search Engine
+  </text>
+  <text x="500" y="230" font-family="Arial, sans-serif" font-size="12" fill="#388e3c" text-anchor="middle">
+    🔐 Auth Service
+  </text>
+  
+  <!-- データ層 -->
+  <rect x="50" y="290" width="600" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="10"/>
+  <text x="350" y="315" font-family="Arial, sans-serif" font-size="16" fill="#f57c00" text-anchor="middle" font-weight="bold">
+    データ層
+  </text>
+  <text x="150" y="340" font-family="Arial, sans-serif" font-size="12" fill="#f57c00" text-anchor="middle">
+    📁 File System
+  </text>
+  <text x="350" y="340" font-family="Arial, sans-serif" font-size="12" fill="#f57c00" text-anchor="middle">
+    🗄️ Metadata DB
+  </text>
+  <text x="550" y="340" font-family="Arial, sans-serif" font-size="12" fill="#f57c00" text-anchor="middle">
+    💾 Cache Layer
+  </text>
+  
+  <!-- インフラ層 -->
+  <rect x="50" y="400" width="600" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="10"/>
+  <text x="350" y="425" font-family="Arial, sans-serif" font-size="16" fill="#7b1fa2" text-anchor="middle" font-weight="bold">
+    インフラストラクチャ層
+  </text>
+  <text x="200" y="450" font-family="Arial, sans-serif" font-size="12" fill="#7b1fa2" text-anchor="middle">
+    ☁️ Cloud Platform
+  </text>
+  <text x="350" y="450" font-family="Arial, sans-serif" font-size="12" fill="#7b1fa2" text-anchor="middle">
+    🐳 Container
+  </text>
+  <text x="500" y="450" font-family="Arial, sans-serif" font-size="12" fill="#7b1fa2" text-anchor="middle">
+    📊 Monitoring
+  </text>
+  
+  <!-- 接続線 -->
+  <path d="M 350 150 L 350 180" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 350 260 L 350 290" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 350 370 L 350 400" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- 矢印の定義 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+  </defs>
+</svg>
