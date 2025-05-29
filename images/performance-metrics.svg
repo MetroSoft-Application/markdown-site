@@ -69,10 +69,10 @@
     🚀 スループット (req/sec)
   </text>
   
-  <!-- スループットメーター -->
+  <!-- スループットメーター（円形プログレス） -->
   <circle cx="225" cy="365" r="60" fill="none" stroke="#e9ecef" stroke-width="10"/>
   <circle cx="225" cy="365" r="60" fill="none" stroke="#007bff" stroke-width="10" 
-          stroke-dasharray="251.3" stroke-dashoffset="125.65" 
+          stroke-dasharray="188" stroke-dashoffset="94" 
           transform="rotate(-90 225 365)"/>
   <text x="225" y="370" font-family="Arial, sans-serif" font-size="20" fill="#007bff" text-anchor="middle" font-weight="bold">
     1,247

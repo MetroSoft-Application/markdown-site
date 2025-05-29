@@ -1,4 +1,10 @@
 <svg width="700" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  
   <rect width="700" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
   
   <!-- タイトル -->
@@ -95,7 +101,7 @@
     Jest / Mocha
   </text>
   <text x="240" y="308" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2" text-anchor="middle">
-    Unit & E2E
+    Unit &amp; E2E
   </text>
   
   <rect x="310" y="260" width="100" height="60" fill="rgba(156, 39, 176, 0.1)" stroke="#9c27b0" stroke-width="1" rx="4"/>
@@ -140,11 +146,4 @@
   <text x="350" y="370" font-family="Arial, sans-serif" font-size="14" fill="#495057" text-anchor="middle" font-weight="bold">
     🔄 開発ワークフロー: Code → Test → Build → Deploy
   </text>
-  
-  <!-- 矢印の定義 -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
 </svg>

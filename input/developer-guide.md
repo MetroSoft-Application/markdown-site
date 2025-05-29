@@ -74,6 +74,59 @@ npm run test:unit
 npm run test:integration
 ```
 
+## デバッグ
+
+### ログ設定
+
+```typescript
+// logger.ts
+import winston from 'winston';
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
+});
+
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(new winston.transports.Console({
+    format: winston.format.simple()
+  }));
+}
+
+export default logger;
+```
+
+### プロファイリング
+
+```typescript
+// performance.ts
+export class PerformanceProfiler {
+  private startTime: number;
+
+  start(label: string): void {
+    this.startTime = performance.now();
+    console.time(label);
+  }
+
+  end(label: string): number {
+    const duration = performance.now() - this.startTime;
+    console.timeEnd(label);
+    return duration;
+  }
+
+  memory(): NodeJS.MemoryUsage {
+    return process.memoryUsage();
+  }
+}
+```
+
 ## トラブルシューティング
 
 開発中の問題は [トラブルシューティング](./troubleshooting.md) で解決方法を確認してください。
