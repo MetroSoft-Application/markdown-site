@@ -1,6 +1,6 @@
 # 🚀 始め方
 
-![始め方](./images/getting-started.png)
+![始め方](../images/getting-started.svg)
 
 このガイドでは、プロジェクトを開始するための手順を説明します。
 
@@ -28,7 +28,7 @@ npm install
 
 詳細な設定については [設定ページ](./configuration.md) を参照してください。
 
-![設定例](./images/configuration-example.png)
+![設定例](../images/configuration.svg)
 
 ## 次のステップ
 

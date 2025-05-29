@@ -1,6 +1,6 @@
 # 🏗️ アーキテクチャ
 
-![アーキテクチャ図](./images/architecture-diagram.png)
+![アーキテクチャ図](../images/architecture-diagram.svg)
 
 ## システム概要
 
@@ -22,7 +22,7 @@
 - PostgreSQL によるデータ永続化
 - Redis によるキャッシュ機能
 
-![データフロー図](./images/data-flow.png)
+![データフロー図](../images/data-flow.svg)
 
 ## セキュリティ
 
@@ -32,11 +32,11 @@
 
 ## パフォーマンス
 
-パフォーマンス最適化の詳細は [開発者ガイド](./developer-guide.md#パフォーマンス最適化) を参照してください。
+パフォーマンス最適化の詳細は [開発者ガイド](./developer-guide.md) を参照してください。
 
 ## デプロイメント
 
-![デプロイメント図](./images/deployment-diagram.png)
+システムのデプロイメント構成については、開発者ガイドを参照してください。
 
 ---
 

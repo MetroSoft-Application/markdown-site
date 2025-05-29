@@ -2,7 +2,7 @@
 
 このドキュメントは相互にリンクされた構造化されたマークダウンファイル群です。
 
-![メインイメージ](./images/main-header.png)
+![メインイメージ](../images/main-header.svg)
 
 ## 📋 目次
 
@@ -28,4 +28,4 @@
 
 ## 🔗 関連リンク
 - [プロジェクトホーム](./overview.md)
-- [クイックスタート](./getting-started.md#クイックスタート)
+- [クイックスタート](./getting-started.md)

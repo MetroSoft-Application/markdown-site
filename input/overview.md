@@ -1,6 +1,6 @@
 # 📋 プロジェクト概要
 
-![プロジェクト概要](./images/project-overview.png)
+![プロジェクト概要](../images/project-overview.svg)
 
 ## 目的
 
@@ -16,7 +16,7 @@
 
 システムの詳細なアーキテクチャについては [アーキテクチャページ](./architecture.md) をご覧ください。
 
-![システム概要図](./images/system-overview.png)
+![システム概要図](../images/system-overview.svg)
 
 ## 次のステップ
 

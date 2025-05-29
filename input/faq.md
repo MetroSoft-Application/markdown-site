@@ -1,7 +1,5 @@
 # ❓ よくある質問 (FAQ)
 
-![FAQ](./images/faq-header.png)
-
 ## 一般的な質問
 
 ### Q: このプロジェクトの目的は何ですか？
@@ -18,8 +16,6 @@ A: [始め方ガイド](./getting-started.md) に詳細な手順が記載され�
 
 A: [API仕様](./api-reference.md) で詳細な仕様とサンプルコードを確認できます。
 
-![API使用例](./images/api-usage-example.png)
-
 ### Q: 開発環境のセットアップで問題が発生しました
 
 A: [開発者ガイド](./developer-guide.md) と [トラブルシューティング](./troubleshooting.md) を参照してください。
@@ -33,8 +29,6 @@ A: [ユーザーガイド](./user-guide.md) で基本的な操作方法を説明
 ### Q: データのバックアップ方法は？
 
 A: システムのアーキテクチャについては [アーキテクチャページ](./architecture.md) で詳細を確認できます。
-
-![データバックアップ](./images/data-backup.png)
 
 ## その他の質問
 

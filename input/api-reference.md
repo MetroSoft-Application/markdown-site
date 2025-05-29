@@ -1,6 +1,6 @@
 # 🔧 API仕様
 
-![API仕様](./images/api-reference.png)
+![API仕様](../images/api-reference.svg)
 
 このドキュメントでは、REST API の詳細仕様を説明します。
 
@@ -44,7 +44,7 @@ GET /users
 }
 ```
 
-![APIレスポンス例](./images/api-response-example.png)
+![APIレスポンス例](../images/api-response-example.svg)
 
 #### POST /users
 
@@ -62,13 +62,13 @@ Content-Type: application/json
 
 ### データ管理
 
-詳細なデータ管理方法は [開発者ガイド](./developer-guide.md#データ管理API) を参照してください。
+詳細なデータ管理方法は [開発者ガイド](./developer-guide.md) を参照してください。
 
 ## エラーハンドリング
 
 APIエラーの詳細は [トラブルシューティング](./troubleshooting.md#APIエラー) をご覧ください。
 
-![エラーコード一覧](./images/error-codes.png)
+![エラーコード一覧](../images/error-codes.svg)
 
 ---
 
