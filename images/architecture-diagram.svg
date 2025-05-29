@@ -1,4 +1,10 @@
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+  </defs>
+  
   <rect width="800" height="600" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
   
   <!-- タイトル -->
@@ -9,19 +15,19 @@
   <!-- ユーザー -->
   <rect x="350" y="60" width="100" height="40" fill="#6f42c1" stroke="#ffffff" stroke-width="2" rx="20"/>
   <text x="400" y="85" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    👤 ユーザー
+    ユーザー
   </text>
   
   <!-- ロードバランサー -->
   <rect x="325" y="130" width="150" height="40" fill="#20c997" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="400" y="155" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    ⚖️ Load Balancer
+    Load Balancer
   </text>
   
   <!-- Webサーバー群 -->
   <rect x="100" y="200" width="120" height="60" fill="#007bff" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="160" y="220" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">
-    🌐 Web Server 1
+    Web Server 1
   </text>
   <text x="160" y="235" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">
     Nginx + Node.js
@@ -32,7 +38,7 @@
   
   <rect x="340" y="200" width="120" height="60" fill="#007bff" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="400" y="220" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">
-    🌐 Web Server 2
+    Web Server 2
   </text>
   <text x="400" y="235" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">
     Nginx + Node.js
@@ -43,7 +49,7 @@
   
   <rect x="580" y="200" width="120" height="60" fill="#007bff" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="640" y="220" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle" font-weight="bold">
-    🌐 Web Server 3
+    Web Server 3
   </text>
   <text x="640" y="235" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">
     Nginx + Node.js
@@ -55,16 +61,16 @@
   <!-- キャッシュ層 -->
   <rect x="50" y="300" width="200" height="60" fill="#dc3545" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="150" y="325" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    🗄️ Redis Cache
+    Redis Cache
   </text>
   <text x="150" y="345" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
-    Session & Link Cache
+    Session &amp; Link Cache
   </text>
   
   <!-- 検索エンジン -->
   <rect x="300" y="300" width="200" height="60" fill="#fd7e14" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="400" y="325" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    🔍 Elasticsearch
+    Elasticsearch
   </text>
   <text x="400" y="345" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Full-text Search
@@ -73,7 +79,7 @@
   <!-- CDN -->
   <rect x="550" y="300" width="200" height="60" fill="#28a745" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="650" y="325" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    🌍 CDN
+    CDN
   </text>
   <text x="650" y="345" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Static Assets
@@ -82,7 +88,7 @@
   <!-- データベース -->
   <rect x="100" y="400" width="150" height="80" fill="#6610f2" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="175" y="425" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    🗃️ PostgreSQL
+    PostgreSQL
   </text>
   <text x="175" y="445" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Metadata DB
@@ -94,19 +100,19 @@
   <!-- ファイルストレージ -->
   <rect x="300" y="400" width="150" height="80" fill="#17a2b8" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="375" y="425" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    📁 File Storage
+    File Storage
   </text>
   <text x="375" y="445" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Markdown Files
   </text>
   <text x="375" y="460" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
-    Images & Assets
+    Images &amp; Assets
   </text>
   
   <!-- 監視システム -->
   <rect x="500" y="400" width="150" height="80" fill="#ffc107" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="575" y="425" font-family="Arial, sans-serif" font-size="14" fill="black" text-anchor="middle" font-weight="bold">
-    📊 Monitoring
+    Monitoring
   </text>
   <text x="575" y="445" font-family="Arial, sans-serif" font-size="12" fill="black" text-anchor="middle">
     Prometheus
@@ -118,7 +124,7 @@
   <!-- バックアップ -->
   <rect x="300" y="520" width="200" height="60" fill="#6c757d" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="400" y="545" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    💾 Backup System
+    Backup System
   </text>
   <text x="400" y="565" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Daily Automated Backup
@@ -145,11 +151,4 @@
   
   <!-- バックアップへの接続 -->
   <path d="M 375 480 L 400 520" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
-  
-  <!-- 矢印の定義 -->
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
-    </marker>
-  </defs>
 </svg>

@@ -3,13 +3,13 @@
   
   <!-- タイトル -->
   <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" fill="#495057" text-anchor="middle" font-weight="bold">
-    📊 パフォーマンス指標ダッシュボード
+    パフォーマンス指標ダッシュボード
   </text>
   
   <!-- レスポンス時間グラフ -->
   <rect x="50" y="70" width="350" height="180" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="225" y="95" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    ⚡ レスポンス時間 (ms)
+    レスポンス時間 (ms)
   </text>
   
   <!-- グラフの軸 -->
@@ -39,7 +39,7 @@
   <!-- CPU使用率 -->
   <rect x="450" y="70" width="300" height="180" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="600" y="95" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    🖥️ CPU使用率
+    CPU使用率
   </text>
   
   <!-- CPU使用率バー -->
@@ -66,14 +66,12 @@
   <!-- スループット -->
   <rect x="50" y="280" width="350" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="225" y="305" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    🚀 スループット (req/sec)
+    スループット (req/sec)
   </text>
   
-  <!-- スループットメーター（円形プログレス） -->
+  <!-- スループットメーター（円形） -->
   <circle cx="225" cy="365" r="60" fill="none" stroke="#e9ecef" stroke-width="10"/>
-  <circle cx="225" cy="365" r="60" fill="none" stroke="#007bff" stroke-width="10" 
-          stroke-dasharray="188" stroke-dashoffset="94" 
-          transform="rotate(-90 225 365)"/>
+  <circle cx="225" cy="365" r="60" fill="none" stroke="#007bff" stroke-width="10" stroke-dasharray="188 188" stroke-dashoffset="94"/>
   <text x="225" y="370" font-family="Arial, sans-serif" font-size="20" fill="#007bff" text-anchor="middle" font-weight="bold">
     1,247
   </text>
@@ -84,7 +82,7 @@
   <!-- エラー率 -->
   <rect x="450" y="280" width="300" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="600" y="305" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    ⚠️ エラー率
+    エラー率
   </text>
   
   <!-- エラー統計 -->
@@ -123,6 +121,6 @@
   
   <!-- ステータス表示 -->
   <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="#28a745" text-anchor="middle" font-weight="bold">
-    🟢 システム正常稼働中 | 最終更新: 2024-01-15 14:30:00
+    システム正常稼働中 | 最終更新: 2024-01-15 14:30:00
   </text>
 </svg>

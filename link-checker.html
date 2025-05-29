@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マークダウンリンクチェッカー</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .file-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        .file-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .link-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            margin: 5px 0;
+            border-radius: 4px;
+            background: white;
+        }
+        .link-text {
+            flex: 1;
+            font-family: monospace;
+            font-size: 14px;
+        }
+        .status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .status.ok {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .summary {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .summary-item {
+            display: inline-block;
+            margin: 10px 20px 10px 0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .total { background: #cce5ff; color: #004085; }
+        .valid { background: #d4edda; color: #155724; }
+        .broken { background: #f8d7da; color: #721c24; }
+        .external { background: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔗 マークダウンリンクチェッカー</h1>
+        
+        <div class="summary">
+            <h2>📊 リンク分析結果</h2>
+            <div class="summary-item total">総リンク数: <span id="total-links">0</span></div>
+            <div class="summary-item valid">有効: <span id="valid-links">0</span></div>
+            <div class="summary-item broken">切れリンク: <span id="broken-links">0</span></div>
+            <div class="summary-item external">外部リンク: <span id="external-links">0</span></div>
+        </div>
+
+        <div id="analysis-results">
+            <!-- 分析結果がここに表示されます -->
+        </div>
+    </div>
+
+    <script>
+        // マークダウンファイルとそのリンクの定義
+        const markdownFiles = {
+            'README.md': {
+                links: [
+                    { text: '[概要](./overview.md)', target: './overview.md', type: 'internal' },
+                    { text: '[始め方](./getting-started.md)', target: './getting-started.md', type: 'internal' },
+                    { text: '[アーキテクチャ](./architecture.md)', target: './architecture.md', type: 'internal' },
+                    { text: '[API仕様](./api-reference.md)', target: './api-reference.md', type: 'internal' },
+                    { text: '[設定](./configuration.md)', target: './configuration.md', type: 'internal' },
+                    { text: '[ユーザーガイド](./user-guide.md)', target: './user-guide.md', type: 'internal' },
+                    { text: '[開発者ガイド](./developer-guide.md)', target: './developer-guide.md', type: 'internal' },
+                    { text: '[トラブルシューティング](./troubleshooting.md)', target: './troubleshooting.md', type: 'internal' },
+                    { text: '[FAQ](./faq.md)', target: './faq.md', type: 'internal' },
+                    { text: '[変更履歴](./changelog.md)', target: './changelog.md', type: 'internal' }
+                ]
+            },
+            'overview.md': {
+                links: [
+                    { text: '[アーキテクチャページ](./architecture.md)', target: './architecture.md', type: 'internal' },
+                    { text: '[始め方](./getting-started.md)', target: './getting-started.md', type: 'internal' },
+                    { text: '[ユーザーガイド](./user-guide.md)', target: './user-guide.md', type: 'internal' },
+                    { text: '[開発者ガイド](./developer-guide.md)', target: './developer-guide.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' }
+                ]
+            },
+            'getting-started.md': {
+                links: [
+                    { text: '[設定ページ](./configuration.md)', target: './configuration.md', type: 'internal' },
+                    { text: '[アーキテクチャ](./architecture.md)', target: './architecture.md', type: 'internal' },
+                    { text: '[API仕様](./api-reference.md)', target: './api-reference.md', type: 'internal' },
+                    { text: '[ユーザーガイド](./user-guide.md)', target: './user-guide.md', type: 'internal' },
+                    { text: '[トラブルシューティング](./troubleshooting.md)', target: './troubleshooting.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' },
+                    { text: '[FAQ](./faq.md)', target: './faq.md', type: 'internal' }
+                ]
+            },
+            'architecture.md': {
+                links: [
+                    { text: '[API仕様](./api-reference.md)', target: './api-reference.md', type: 'internal' },
+                    { text: '[開発者ガイド](./developer-guide.md#パフォーマンス最適化)', target: './developer-guide.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' },
+                    { text: '[概要](./overview.md)', target: './overview.md', type: 'internal' }
+                ]
+            },
+            'user-guide.md': {
+                links: [
+                    { text: '[開発者ガイド](./developer-guide.md#データ編集)', target: './developer-guide.md', type: 'internal' },
+                    { text: '[FAQ](./faq.md)', target: './faq.md', type: 'internal' },
+                    { text: '[トラブルシューティング](./troubleshooting.md)', target: './troubleshooting.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' }
+                ]
+            },
+            'api-reference.md': {
+                links: [
+                    { text: '[開発者ガイド](./developer-guide.md#データ管理API)', target: './developer-guide.md', type: 'internal' },
+                    { text: '[トラブルシューティング](./troubleshooting.md#APIエラー)', target: './troubleshooting.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' },
+                    { text: '[アーキテクチャ](./architecture.md)', target: './architecture.md', type: 'internal' }
+                ]
+            },
+            'developer-guide.md': {
+                links: [
+                    { text: '[始め方](./getting-started.md)', target: './getting-started.md', type: 'internal' },
+                    { text: '[API仕様](./api-reference.md)', target: './api-reference.md', type: 'internal' },
+                    { text: '[アーキテクチャ](./architecture.md)', target: './architecture.md', type: 'internal' },
+                    { text: '[トラブルシューティング](./troubleshooting.md)', target: './troubleshooting.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' },
+                    { text: '[ユーザーガイド](./user-guide.md)', target: './user-guide.md', type: 'internal' }
+                ]
+            },
+            'faq.md': {
+                links: [
+                    { text: '[概要ページ](./overview.md)', target: './overview.md', type: 'internal' },
+                    { text: '[始め方ガイド](./getting-started.md)', target: './getting-started.md', type: 'internal' },
+                    { text: '[API仕様](./api-reference.md)', target: './api-reference.md', type: 'internal' },
+                    { text: '[開発者ガイド](./developer-guide.md)', target: './developer-guide.md', type: 'internal' },
+                    { text: '[トラブルシューティング](./troubleshooting.md)', target: './troubleshooting.md', type: 'internal' },
+                    { text: '[ユーザーガイド](./user-guide.md)', target: './user-guide.md', type: 'internal' },
+                    { text: '[アーキテクチャページ](./architecture.md)', target: './architecture.md', type: 'internal' },
+                    { text: '[変更履歴](./changelog.md)', target: './changelog.md', type: 'internal' },
+                    { text: '[ホーム](./README.md)', target: './README.md', type: 'internal' }
+                ]
+            }
+        };
+
+        // 存在するファイルのリスト
+        const existingFiles = [
+            'README.md',
+            'overview.md', 
+            'getting-started.md',
+            'architecture.md',
+            'api-reference.md',
+            'user-guide.md',
+            'developer-guide.md',
+            'faq.md'
+        ];
+
+        // 不足しているファイル
+        const missingFiles = [
+            'configuration.md',
+            'troubleshooting.md',
+            'changelog.md'
+        ];
+
+        function analyzeLinks() {
+            let totalLinks = 0;
+            let validLinks = 0;
+            let brokenLinks = 0;
+            let externalLinks = 0;
+
+            const resultsContainer = document.getElementById('analysis-results');
+            resultsContainer.innerHTML = '';
+
+            Object.keys(markdownFiles).forEach(fileName => {
+                const fileData = markdownFiles[fileName];
+                const fileSection = document.createElement('div');
+                fileSection.className = 'file-section';
+                
+                const fileExists = existingFiles.includes(fileName);
+                const fileTitle = document.createElement('div');
+                fileTitle.className = 'file-name';
+                fileTitle.innerHTML = `📄 ${fileName} ${fileExists ? '✅' : '❌ (不足)'}`;
+                fileSection.appendChild(fileTitle);
+
+                fileData.links.forEach(link => {
+                    totalLinks++;
+                    const linkItem = document.createElement('div');
+                    linkItem.className = 'link-item';
+
+                    const linkText = document.createElement('div');
+                    linkText.className = 'link-text';
+                    linkText.textContent = link.text;
+
+                    const status = document.createElement('div');
+                    status.className = 'status';
+
+                    // リンクの状態をチェック
+                    const targetFile = link.target.replace('./', '').split('#')[0];
+                    
+                    if (link.type === 'external') {
+                        status.textContent = '外部リンク';
+                        status.classList.add('warning');
+                        externalLinks++;
+                    } else if (existingFiles.includes(targetFile)) {
+                        status.textContent = 'OK';
+                        status.classList.add('ok');
+                        validLinks++;
+                    } else {
+                        status.textContent = 'リンク切れ';
+                        status.classList.add('error');
+                        brokenLinks++;
+                    }
+
+                    linkItem.appendChild(linkText);
+                    linkItem.appendChild(status);
+                    fileSection.appendChild(linkItem);
+                });
+
+                resultsContainer.appendChild(fileSection);
+            });
+
+            // サマリーを更新
+            document.getElementById('total-links').textContent = totalLinks;
+            document.getElementById('valid-links').textContent = validLinks;
+            document.getElementById('broken-links').textContent = brokenLinks;
+            document.getElementById('external-links').textContent = externalLinks;
+        }
+
+        // ページ読み込み時に分析を実行
+        window.addEventListener('load', analyzeLinks);
+    </script>
+</body>
+</html>

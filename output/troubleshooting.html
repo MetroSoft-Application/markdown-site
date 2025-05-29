@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>troubleshooting</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">troubleshooting</h1>
+</header>
+<h1 id="トラブルシューティング">🔧 トラブルシューティング</h1>
+<figure>
+<img src="../images/troubleshooting.svg" alt="トラブルシューティング" />
+<figcaption aria-hidden="true">トラブルシューティング</figcaption>
+</figure>
+<p>よくある問題と解決方法をまとめています。</p>
+<h2 id="一般的な問題">一般的な問題</h2>
+<h3 id="サーバーが起動しない">サーバーが起動しない</h3>
+<p><strong>症状</strong>: <code>npm start</code> でエラーが発生する</p>
+<p><strong>解決方法</strong>: 1. Node.js のバージョンを確認
+(<code>node --version</code>) 2. 依存関係を再インストール
+(<code>npm install</code>) 3. 環境変数を確認 (<a
+href="./configuration.html">設定</a> を参照)</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 依存関係のクリーンインストール</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> node_modules package-lock.json</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install</span></code></pre></div>
+<h3 id="データベース接続エラー">データベース接続エラー</h3>
+<p><strong>症状</strong>: <code>Database connection failed</code></p>
+<p><strong>解決方法</strong>: 1. PostgreSQL が起動しているか確認 2.
+接続文字列を確認 3. ファイアウォール設定を確認</p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PostgreSQL の状態確認</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status postgresql</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 接続テスト</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-h</span> localhost <span class="at">-U</span> username <span class="at">-d</span> database_name</span></code></pre></div>
+<h2 id="開発環境の問題">開発環境の問題</h2>
+<h3 id="hot-reload-が動作しない">Hot Reload が動作しない</h3>
+<p><strong>解決方法</strong>: 1. ファイル監視の設定を確認 2.
+ポート競合がないか確認 3. 開発サーバーを再起動</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 開発サーバーの再起動</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev</span></code></pre></div>
+<h3 id="ビルドエラー">ビルドエラー</h3>
+<p><strong>症状</strong>: TypeScript コンパイルエラー</p>
+<p><strong>解決方法</strong>: 1. <code>tsconfig.json</code> の設定を確認
+2. 型定義ファイルを更新 3. キャッシュをクリア</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TypeScript キャッシュクリア</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> dist/ .tscache/</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run build</span></code></pre></div>
+<h2 id="apiエラー">APIエラー</h2>
+<h3 id="unauthorized">401 Unauthorized</h3>
+<p><strong>原因</strong>: 認証トークンの問題</p>
+<p><strong>解決方法</strong>: 1. トークンの有効期限を確認 2. JWT
+シークレットキーを確認 3. 再ログインを実行</p>
+<h3 id="not-found">404 Not Found</h3>
+<p><strong>原因</strong>: エンドポイントが存在しない</p>
+<p><strong>解決方法</strong>: 1. <a
+href="./api-reference.html">API仕様</a> でエンドポイントを確認 2.
+ルーティング設定を確認 3. サーバーログを確認</p>
+<h3 id="internal-server-error">500 Internal Server Error</h3>
+<p><strong>原因</strong>: サーバー内部エラー</p>
+<p><strong>解決方法</strong>: 1. サーバーログを確認 2.
+データベース接続を確認 3. エラースタックトレースを分析</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ログファイルの確認</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-f</span> logs/error.log</span></code></pre></div>
+<h2 id="パフォーマンス問題">パフォーマンス問題</h2>
+<h3 id="レスポンスが遅い">レスポンスが遅い</h3>
+<p><strong>解決方法</strong>: 1. データベースクエリを最適化 2.
+キャッシュ設定を確認 3. <a
+href="./developer-guide.md#パフォーマンス最適化">パフォーマンス最適化</a>
+を参照</p>
+<h3 id="メモリ使用量が多い">メモリ使用量が多い</h3>
+<p><strong>解決方法</strong>: 1. メモリリークを確認 2.
+キャッシュサイズを調整 3. 不要なプロセスを終了</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># メモリ使用量の確認</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="at">--sort</span><span class="op">=</span>-%mem <span class="kw">|</span> <span class="fu">head</span> <span class="at">-10</span></span></code></pre></div>
+<h2 id="ネットワーク問題">ネットワーク問題</h2>
+<h3 id="接続タイムアウト">接続タイムアウト</h3>
+<p><strong>解決方法</strong>: 1. ネットワーク接続を確認 2.
+プロキシ設定を確認 3. DNSの動作を確認</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 接続テスト</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-I</span> http://localhost:3000/health</span></code></pre></div>
+<h2 id="docker関連の問題">Docker関連の問題</h2>
+<h3 id="コンテナが起動しない">コンテナが起動しない</h3>
+<p><strong>解決方法</strong>: 1. Dockerファイルの構文を確認 2.
+ベースイメージを確認 3. ポートマッピングを確認</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># コンテナログの確認</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs container_name</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># コンテナの状態確認</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">-a</span></span></code></pre></div>
+<h2 id="ログとデバッグ">ログとデバッグ</h2>
+<h3 id="ログレベルの調整">ログレベルの調整</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 環境変数でログレベルを設定</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">LOG_LEVEL</span><span class="op">=</span>debug</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start</span></code></pre></div>
+<h3 id="デバッグモードの有効化">デバッグモードの有効化</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># デバッグモードで起動</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">DEBUG</span><span class="op">=</span><span class="pp">*</span> <span class="ex">npm</span> run dev</span></code></pre></div>
+<h2 id="緊急時の対応">緊急時の対応</h2>
+<h3 id="システム復旧手順">システム復旧手順</h3>
+<ol type="1">
+<li><p><strong>バックアップからの復元</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># データベース復元</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pg_restore</span> <span class="at">-d</span> database_name backup_file.sql</span></code></pre></div></li>
+<li><p><strong>ログの確認</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># エラーログの確認</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-i</span> error logs/<span class="pp">*</span>.log</span></code></pre></div></li>
+<li><p><strong>システム状態の確認</strong></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># プロセス確認</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="kw">|</span> <span class="fu">grep</span> node</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ポート使用状況</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">netstat</span> <span class="at">-tulpn</span> <span class="kw">|</span> <span class="fu">grep</span> :3000</span></code></pre></div></li>
+</ol>
+<h2 id="サポート情報">サポート情報</h2>
+<p>問題が解決しない場合:</p>
+<ol type="1">
+<li><a href="./faq.html">FAQ</a> を確認</li>
+<li><a href="./developer-guide.html">開発者ガイド</a> を参照</li>
+<li>ログファイルを添付してサポートに連絡</li>
+</ol>
+<hr />
+<h2 id="ナビゲーション">ナビゲーション</h2>
+<ul>
+<li><a href="./README.html">🏠 ホーム</a></li>
+<li><a href="./configuration.html">⚙️ 設定</a></li>
+<li><a href="./api-reference.html">🔧 API仕様</a></li>
+<li><a href="./faq.html">❓ FAQ</a></li>
+</ul>
+</body>
+</html>
