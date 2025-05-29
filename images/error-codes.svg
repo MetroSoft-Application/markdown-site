@@ -1,0 +1,111 @@
+<svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="500" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
+  
+  <!-- タイトル -->
+  <text x="350" y="30" font-family="Arial, sans-serif" font-size="24" fill="#dc3545" text-anchor="middle" font-weight="bold">
+    ⚠️ HTTPエラーコード一覧
+  </text>
+  
+  <!-- 400番台エラー -->
+  <rect x="50" y="70" width="280" height="180" fill="#fff5f5" stroke="#ef5350" stroke-width="2" rx="8"/>
+  <text x="190" y="95" font-family="Arial, sans-serif" font-size="16" fill="#d32f2f" text-anchor="middle" font-weight="bold">
+    4xx クライアントエラー
+  </text>
+  
+  <!-- 400 -->
+  <rect x="70" y="110" width="240" height="25" fill="#ffebee" stroke="#e57373" stroke-width="1" rx="4"/>
+  <text x="80" y="128" font-family="monospace" font-size="12" fill="#c62828" font-weight="bold">400</text>
+  <text x="120" y="128" font-family="Arial, sans-serif" font-size="11" fill="#d32f2f">Bad Request - 不正なリクエスト</text>
+  
+  <!-- 401 -->
+  <rect x="70" y="140" width="240" height="25" fill="#ffebee" stroke="#e57373" stroke-width="1" rx="4"/>
+  <text x="80" y="158" font-family="monospace" font-size="12" fill="#c62828" font-weight="bold">401</text>
+  <text x="120" y="158" font-family="Arial, sans-serif" font-size="11" fill="#d32f2f">Unauthorized - 認証が必要</text>
+  
+  <!-- 403 -->
+  <rect x="70" y="170" width="240" height="25" fill="#ffebee" stroke="#e57373" stroke-width="1" rx="4"/>
+  <text x="80" y="188" font-family="monospace" font-size="12" fill="#c62828" font-weight="bold">403</text>
+  <text x="120" y="188" font-family="Arial, sans-serif" font-size="11" fill="#d32f2f">Forbidden - アクセス権限なし</text>
+  
+  <!-- 404 -->
+  <rect x="70" y="200" width="240" height="25" fill="#ffebee" stroke="#e57373" stroke-width="1" rx="4"/>
+  <text x="80" y="218" font-family="monospace" font-size="12" fill="#c62828" font-weight="bold">404</text>
+  <text x="120" y="218" font-family="Arial, sans-serif" font-size="11" fill="#d32f2f">Not Found - リソースが見つからない</text>
+  
+  <!-- 429 -->
+  <rect x="70" y="230" width="240" height="25" fill="#ffebee" stroke="#e57373" stroke-width="1" rx="4"/>
+  <text x="80" y="248" font-family="monospace" font-size="12" fill="#c62828" font-weight="bold">429</text>
+  <text x="120" y="248" font-family="Arial, sans-serif" font-size="11" fill="#d32f2f">Too Many Requests - レート制限</text>
+  
+  <!-- 500番台エラー -->
+  <rect x="370" y="70" width="280" height="180" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="8"/>
+  <text x="510" y="95" font-family="Arial, sans-serif" font-size="16" fill="#e65100" text-anchor="middle" font-weight="bold">
+    5xx サーバーエラー
+  </text>
+  
+  <!-- 500 -->
+  <rect x="390" y="110" width="240" height="25" fill="#fff8e1" stroke="#ffb74d" stroke-width="1" rx="4"/>
+  <text x="400" y="128" font-family="monospace" font-size="12" fill="#ef6c00" font-weight="bold">500</text>
+  <text x="440" y="128" font-family="Arial, sans-serif" font-size="11" fill="#e65100">Internal Server Error - サーバー内部エラー</text>
+  
+  <!-- 502 -->
+  <rect x="390" y="140" width="240" height="25" fill="#fff8e1" stroke="#ffb74d" stroke-width="1" rx="4"/>
+  <text x="400" y="158" font-family="monospace" font-size="12" fill="#ef6c00" font-weight="bold">502</text>
+  <text x="440" y="158" font-family="Arial, sans-serif" font-size="11" fill="#e65100">Bad Gateway - 不正なゲートウェイ</text>
+  
+  <!-- 503 -->
+  <rect x="390" y="170" width="240" height="25" fill="#fff8e1" stroke="#ffb74d" stroke-width="1" rx="4"/>
+  <text x="400" y="188" font-family="monospace" font-size="12" fill="#ef6c00" font-weight="bold">503</text>
+  <text x="440" y="188" font-family="Arial, sans-serif" font-size="11" fill="#e65100">Service Unavailable - サービス利用不可</text>
+  
+  <!-- 504 -->
+  <rect x="390" y="200" width="240" height="25" fill="#fff8e1" stroke="#ffb74d" stroke-width="1" rx="4"/>
+  <text x="400" y="218" font-family="monospace" font-size="12" fill="#ef6c00" font-weight="bold">504</text>
+  <text x="440" y="218" font-family="Arial, sans-serif" font-size="11" fill="#e65100">Gateway Timeout - ゲートウェイタイムアウト</text>
+  
+  <!-- エラーレスポンス例 -->
+  <rect x="50" y="280" width="600" height="150" fill="#f8f9fa" stroke="#6c757d" stroke-width="2" rx="8"/>
+  <text x="350" y="305" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
+    📄 エラーレスポンス例
+  </text>
+  
+  <rect x="70" y="320" width="560" height="90" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="4"/>
+  <text x="85" y="340" font-family="monospace" font-size="11" fill="#dc3545">
+    {
+  </text>
+  <text x="100" y="355" font-family="monospace" font-size="11" fill="#dc3545">
+    "error": {
+  </text>
+  <text x="115" y="370" font-family="monospace" font-size="11" fill="#dc3545">
+    "code": 401,
+  </text>
+  <text x="115" y="385" font-family="monospace" font-size="11" fill="#dc3545">
+    "message": "認証トークンが無効です",
+  </text>
+  <text x="115" y="400" font-family="monospace" font-size="11" fill="#dc3545">
+    "timestamp": "2024-01-15T10:30:00Z"
+  </text>
+  <text x="100" y="415" font-family="monospace" font-size="11" fill="#dc3545">
+    }
+  </text>
+  <text x="85" y="430" font-family="monospace" font-size="11" fill="#dc3545">
+    }
+  </text>
+  
+  <!-- 対処法 -->
+  <rect x="450" y="340" width="160" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="1" rx="4"/>
+  <text x="530" y="360" font-family="Arial, sans-serif" font-size="12" fill="#1565c0" text-anchor="middle" font-weight="bold">
+    💡 対処法
+  </text>
+  <text x="460" y="380" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">
+    1. トークンを確認
+  </text>
+  <text x="460" y="395" font-family="Arial, sans-serif" font-size="10" fill="#1976d2">
+    2. 再認証を実行
+  </text>
+  
+  <!-- 注意事項 -->
+  <text x="350" y="470" font-family="Arial, sans-serif" font-size="12" fill="#6c757d" text-anchor="middle">
+    ⚠️ エラーが継続する場合は、システム管理者にお問い合わせください
+  </text>
+</svg>

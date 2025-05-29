@@ -1,0 +1,32 @@
+<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="devGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2196F3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#21CBF3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#devGrad)" />
+  
+  <!-- コードブロック風の装飾 -->
+  <rect x="50" y="30" width="150" height="80" fill="rgba(255,255,255,0.1)" rx="8"/>
+  <rect x="60" y="40" width="130" height="8" fill="rgba(255,255,255,0.3)" rx="4"/>
+  <rect x="60" y="55" width="100" height="8" fill="rgba(255,255,255,0.2)" rx="4"/>
+  <rect x="60" y="70" width="110" height="8" fill="rgba(255,255,255,0.25)" rx="4"/>
+  <rect x="60" y="85" width="80" height="8" fill="rgba(255,255,255,0.2)" rx="4"/>
+  
+  <rect x="600" y="110" width="150" height="80" fill="rgba(255,255,255,0.1)" rx="8"/>
+  <rect x="610" y="120" width="130" height="8" fill="rgba(255,255,255,0.3)" rx="4"/>
+  <rect x="610" y="135" width="100" height="8" fill="rgba(255,255,255,0.2)" rx="4"/>
+  <rect x="610" y="150" width="110" height="8" fill="rgba(255,255,255,0.25)" rx="4"/>
+  <rect x="610" y="165" width="80" height="8" fill="rgba(255,255,255,0.2)" rx="4"/>
+  
+  <!-- メインタイトル -->
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">
+    👨‍💻 開発者ガイド
+  </text>
+  
+  <!-- サブタイトル -->
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.9)" text-anchor="middle" dominant-baseline="middle">
+    開発環境・API・テスト・パフォーマンス最適化
+  </text>
+</svg>

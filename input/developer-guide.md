@@ -1,6 +1,6 @@
 # 👨‍💻 開発者ガイド
 
-![開発者ガイド](./images/developer-guide.png)
+![開発者ガイド](../images/developer-guide.svg)
 
 このガイドでは、開発者向けの詳細な技術情報を提供します。
 
@@ -21,7 +21,7 @@ npm test
 npm run dev
 ```
 
-![開発環境](./images/development-environment.png)
+![開発環境](../images/development-environment.svg)
 
 ## コードスタイル
 
@@ -55,7 +55,7 @@ app.get('/api/custom', (req, res) => {
 
 ## パフォーマンス最適化
 
-![パフォーマンス指標](./images/performance-metrics.png)
+![パフォーマンス指標](../images/performance-metrics.svg)
 
 ### キャッシュ戦略
 

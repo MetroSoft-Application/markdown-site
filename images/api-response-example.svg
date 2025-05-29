@@ -1,0 +1,81 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- タイトル -->
+  <text x="300" y="30" font-family="Arial, sans-serif" font-size="20" fill="#495057" text-anchor="middle" font-weight="bold">
+    📊 APIレスポンス例
+  </text>
+  
+  <!-- リクエスト部分 -->
+  <rect x="50" y="60" width="500" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="8"/>
+  <text x="70" y="85" font-family="Arial, sans-serif" font-size="14" fill="#1976d2" font-weight="bold">
+    📤 HTTP Request
+  </text>
+  <text x="70" y="105" font-family="monospace" font-size="12" fill="#1565c0">
+    GET /api/v1/users
+  </text>
+  <text x="70" y="125" font-family="monospace" font-size="12" fill="#1565c0">
+    Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+  </text>
+  
+  <!-- 矢印 -->
+  <path d="M 300 140 L 300 170" stroke="#6c757d" stroke-width="3" marker-end="url(#arrowhead)"/>
+  
+  <!-- レスポンス部分 -->
+  <rect x="50" y="180" width="500" height="180" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="8"/>
+  <text x="70" y="205" font-family="Arial, sans-serif" font-size="14" fill="#2e7d32" font-weight="bold">
+    📥 HTTP Response (200 OK)
+  </text>
+  
+  <!-- JSONレスポンス -->
+  <rect x="70" y="220" width="460" height="120" fill="#ffffff" stroke="#c8e6c9" stroke-width="1" rx="4"/>
+  <text x="85" y="240" font-family="monospace" font-size="11" fill="#1b5e20">
+    {
+  </text>
+  <text x="100" y="255" font-family="monospace" font-size="11" fill="#1b5e20">
+    "status": "success",
+  </text>
+  <text x="100" y="270" font-family="monospace" font-size="11" fill="#1b5e20">
+    "data": {
+  </text>
+  <text x="115" y="285" font-family="monospace" font-size="11" fill="#1b5e20">
+    "users": [
+  </text>
+  <text x="130" y="300" font-family="monospace" font-size="11" fill="#1b5e20">
+    {
+  </text>
+  <text x="145" y="315" font-family="monospace" font-size="11" fill="#d32f2f">
+    "id": 1, "name": "太郎", "email": "taro@example.com"
+  </text>
+  <text x="130" y="330" font-family="monospace" font-size="11" fill="#1b5e20">
+    }
+  </text>
+  <text x="115" y="345" font-family="monospace" font-size="11" fill="#1b5e20">
+    ]
+  </text>
+  <text x="100" y="360" font-family="monospace" font-size="11" fill="#1b5e20">
+    }
+  </text>
+  <text x="85" y="375" font-family="monospace" font-size="11" fill="#1b5e20">
+    }
+  </text>
+  
+  <!-- ステータス情報 -->
+  <rect x="370" y="240" width="140" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="1" rx="4"/>
+  <text x="440" y="260" font-family="Arial, sans-serif" font-size="12" fill="#ef6c00" text-anchor="middle" font-weight="bold">
+    📋 Status Info
+  </text>
+  <text x="380" y="280" font-family="monospace" font-size="10" fill="#e65100">
+    Status: 200 OK
+  </text>
+  <text x="380" y="295" font-family="monospace" font-size="10" fill="#e65100">
+    Content-Type: JSON
+  </text>
+  
+  <!-- 矢印の定義 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6c757d"/>
+    </marker>
+  </defs>
+</svg>
