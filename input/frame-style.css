@@ -68,13 +68,13 @@ body {
     .container {
         flex-direction: column;
     }
-    
+
     .sidebar {
         width: 100%;
         height: auto;
         max-height: 200px;
     }
-    
+
     .content {
         height: calc(100vh - 200px);
     }
