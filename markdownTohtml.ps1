@@ -16,6 +16,12 @@ if (-not (Test-Path "$InputFolder\style.css")) {
 New-Item -ItemType Directory -Force -Path $OutputFolder | Out-Null
 Copy-Item "$InputFolder\style.css" -Destination "$OutputFolder" -Force
 
+# フレーム用CSSもコピー
+if (Test-Path "$InputFolder\frame-style.css") {
+    Copy-Item "$InputFolder\frame-style.css" -Destination "$OutputFolder" -Force
+}
+
+# Markdownファイルの変換
 Get-ChildItem "$InputFolder\*.md" | ForEach-Object {
     $mdPath = $_.FullName
     $baseName = $_.BaseName
@@ -36,3 +42,28 @@ Get-ChildItem "$InputFolder\*.md" | ForEach-Object {
 
     Remove-Item $tempPath
 }
+
+# フレーム付きindex.htmlの生成
+$templatePath = Join-Path $InputFolder "index-template.html"
+if (-not (Test-Path $templatePath)) {
+    Write-Error "index-template.html がinputフォルダに見つかりません。"
+    exit 1
+}
+
+$htmlFiles = Get-ChildItem "$OutputFolder\*.html" | Where-Object { $_.BaseName -ne "index" }
+$navigationLinks = ""
+foreach ($file in $htmlFiles) {
+    $displayName = $file.BaseName -replace '-', ' '
+    $displayName = (Get-Culture).TextInfo.ToTitleCase($displayName)
+    $navigationLinks += "        <li><a href=`"$($file.Name)`" target=`"content`">$displayName</a></li>`n"
+}
+
+# テンプレートファイルを読み込み
+$indexTemplate = Get-Content $templatePath -Encoding UTF8 -Raw
+
+# プレースホルダーを置換
+$indexHtml = $indexTemplate -replace '\{\{NAVIGATION_LINKS\}\}', $navigationLinks
+$indexHtml = $indexHtml -replace '\{\{DEFAULT_PAGE\}\}', 'README.html'
+
+$indexPath = Join-Path $OutputFolder "index.html"
+[System.IO.File]::WriteAllText($indexPath, $indexHtml, (New-Object System.Text.UTF8Encoding $false))
