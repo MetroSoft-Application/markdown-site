@@ -60,7 +60,7 @@ export const databaseConfig = {
 
 ### キャッシュ設定
 
-Redis キャッシュの設定については [アーキテクチャ](./architecture.md) で詳細を確認してください。
+Redis キャッシュの設定については [アーキテクチャ](./040-architecture.html) で詳細を確認してください。
 
 ```typescript
 // cache.config.ts
@@ -135,7 +135,7 @@ LOG_LEVEL=warn
 
 ## ナビゲーション
 
-- [🏠 ホーム](./README.md)
-- [🚀 始め方](./getting-started.md)
-- [🏗️ アーキテクチャ](./architecture.md)
-- [❓ FAQ](./faq.md)
+- [🏠 ホーム](./010-README.html)
+- [🚀 始め方](./030-getting-started.html)
+- [🏗️ アーキテクチャ](./040-architecture.html)
+- [❓ FAQ](./100-faq.html)

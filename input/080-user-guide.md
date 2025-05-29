@@ -28,19 +28,19 @@
 
 #### データの編集
 
-詳細な編集機能については [開発者ガイド](./developer-guide.md#データ編集) も参照してください。
+詳細な編集機能については [開発者ガイド](./070-developer-guide.html#データ編集) も参照してください。
 
 ## よくある操作
 
 問題が発生した場合は：
-- [FAQ](./faq.md) で一般的な質問を確認
-- [トラブルシューティング](./troubleshooting.md) で解決方法を検索
+- [FAQ](./100-faq.html) で一般的な質問を確認
+- [トラブルシューティング](./090-troubleshooting.html) で解決方法を検索
 
 ---
 
 ## ナビゲーション
 
-- [🏠 ホーム](./README.md)
-- [👨‍💻 開発者ガイド](./developer-guide.md)
-- [❓ FAQ](./faq.md)
-- [🔧 トラブルシューティング](./troubleshooting.md)
+- [🏠 ホーム](./010-README.html)
+- [👨‍💻 開発者ガイド](./070-developer-guide.html)
+- [❓ FAQ](./100-faq.html)
+- [🔧 トラブルシューティング](./090-troubleshooting.html)

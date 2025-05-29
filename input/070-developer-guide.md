@@ -6,7 +6,7 @@
 
 ## 開発環境のセットアップ
 
-基本的なセットアップは [始め方](./getting-started.md) を参照してください。
+基本的なセットアップは [始め方](./030-getting-started.html) を参照してください。
 
 ### 追加の開発ツール
 
@@ -40,7 +40,7 @@ npm run dev
 
 ## API開発
 
-詳細なAPI仕様は [API仕様](./api-reference.md) を参照してください。
+詳細なAPI仕様は [API仕様](./050-api-reference.html) を参照してください。
 
 ### データ管理API
 
@@ -62,7 +62,7 @@ app.get('/api/custom', (req, res) => {
 - Redis によるセッションキャッシュ
 - CDN による静的リソース配信
 
-詳細なアーキテクチャは [アーキテクチャ](./architecture.md) をご覧ください。
+詳細なアーキテクチャは [アーキテクチャ](./040-architecture.html) をご覧ください。
 
 ## テスト
 
@@ -131,15 +131,15 @@ export class PerformanceProfiler {
 
 開発中の問題については、以下のリソースを確認してください：
 
-- [API仕様](./api-reference.md) でエンドポイントの詳細を確認
-- [アーキテクチャ](./architecture.md) でシステム構成を理解
-- [FAQ](./faq.md) でよくある質問を確認
+- [API仕様](./050-api-reference.html) でエンドポイントの詳細を確認
+- [アーキテクチャ](./040-architecture.html) でシステム構成を理解
+- [FAQ](./100-faq.html) でよくある質問を確認
 
 ---
 
 ## ナビゲーション
 
-- [🏠 ホーム](./README.md)
-- [🏗️ アーキテクチャ](./architecture.md)
-- [🔧 API仕様](./api-reference.md)
-- [📚 ユーザーガイド](./user-guide.md)
+- [🏠 ホーム](./010-README.html)
+- [🏗️ アーキテクチャ](./040-architecture.html)
+- [🔧 API仕様](./050-api-reference.html)
+- [📚 ユーザーガイド](./080-user-guide.html)

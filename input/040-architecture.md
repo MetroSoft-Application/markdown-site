@@ -16,7 +16,7 @@
 - Node.js + Express サーバー
 - REST API エンドポイント
 
-詳細なAPI仕様は [API仕様](./api-reference.md) を参照してください。
+詳細なAPI仕様は [API仕様](./050-api-reference.html) を参照してください。
 
 ### データベース
 - PostgreSQL によるデータ永続化
@@ -32,7 +32,7 @@
 
 ## パフォーマンス
 
-パフォーマンス最適化の詳細は [開発者ガイド](./developer-guide.md) を参照してください。
+パフォーマンス最適化の詳細は [開発者ガイド](./070-developer-guide.html) を参照してください。
 
 ## デプロイメント
 
@@ -42,7 +42,7 @@
 
 ## ナビゲーション
 
-- [🏠 ホーム](./README.md)
-- [📋 概要](./overview.md)
-- [🔧 API仕様](./api-reference.md)
-- [👥 開発者ガイド](./developer-guide.md)
+- [🏠 ホーム](./010-README.html)
+- [📋 概要](./020-overview.html)
+- [🔧 API仕様](./050-api-reference.html)
+- [👥 開発者ガイド](./070-developer-guide.html)

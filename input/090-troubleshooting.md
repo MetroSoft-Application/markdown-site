@@ -13,7 +13,7 @@
 **解決方法**:
 1. Node.js のバージョンを確認 (`node --version`)
 2. 依存関係を再インストール (`npm install`)
-3. 環境変数を確認 ([設定](./configuration.md) を参照)
+3. 環境変数を確認 ([設定](./060-configuration.html) を参照)
 
 ```bash
 # 依存関係のクリーンインストール
@@ -83,7 +83,7 @@ npm run build
 **原因**: エンドポイントが存在しない
 
 **解決方法**:
-1. [API仕様](./api-reference.md) でエンドポイントを確認
+1. [API仕様](./050-api-reference.html) でエンドポイントを確認
 2. ルーティング設定を確認
 3. サーバーログを確認
 
@@ -108,7 +108,7 @@ tail -f logs/error.log
 **解決方法**:
 1. データベースクエリを最適化
 2. キャッシュ設定を確認
-3. [パフォーマンス最適化](./developer-guide.md#パフォーマンス最適化) を参照
+3. [パフォーマンス最適化](./070-developer-guide.html#パフォーマンス最適化) を参照
 
 ### メモリ使用量が多い
 
@@ -198,15 +198,15 @@ DEBUG=* npm run dev
 
 問題が解決しない場合:
 
-1. [FAQ](./faq.md) を確認
-2. [開発者ガイド](./developer-guide.md) を参照
+1. [FAQ](./100-faq.html) を確認
+2. [開発者ガイド](./070-developer-guide.html) を参照
 3. ログファイルを添付してサポートに連絡
 
 ---
 
 ## ナビゲーション
 
-- [🏠 ホーム](./README.md)
-- [⚙️ 設定](./configuration.md)
-- [🔧 API仕様](./api-reference.md)
-- [❓ FAQ](./faq.md)
+- [🏠 ホーム](./010-README.html)
+- [⚙️ 設定](./060-configuration.html)
+- [🔧 API仕様](./050-api-reference.html)
+- [❓ FAQ](./100-faq.html)

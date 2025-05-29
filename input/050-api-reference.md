@@ -62,11 +62,11 @@ Content-Type: application/json
 
 ### データ管理
 
-詳細なデータ管理方法は [開発者ガイド](./developer-guide.md) を参照してください。
+詳細なデータ管理方法は [開発者ガイド](./070-developer-guide.html) を参照してください。
 
 ## エラーハンドリング
 
-APIエラーの詳細は [トラブルシューティング](./troubleshooting.md#APIエラー) をご覧ください。
+APIエラーの詳細は [トラブルシューティング](./090-troubleshooting.html#APIエラー) をご覧ください。
 
 ![エラーコード一覧](../images/error-codes.svg)
 
@@ -74,7 +74,7 @@ APIエラーの詳細は [トラブルシューティング](./troubleshooting.m
 
 ## ナビゲーション
 
-- [🏠 ホーム](./README.md)
-- [🏗️ アーキテクチャ](./architecture.md)
-- [👨‍💻 開発者ガイド](./developer-guide.md)
-- [🔧 トラブルシューティング](./troubleshooting.md)
+- [🏠 ホーム](./010-README.html)
+- [🏗️ アーキテクチャ](./040-architecture.html)
+- [👨‍💻 開発者ガイド](./070-developer-guide.html)
+- [🔧 トラブルシューティング](./090-troubleshooting.html)
