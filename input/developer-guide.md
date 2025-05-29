@@ -129,7 +129,11 @@ export class PerformanceProfiler {
 
 ## トラブルシューティング
 
-開発中の問題は [トラブルシューティング](./troubleshooting.md) で解決方法を確認してください。
+開発中の問題については、以下のリソースを確認してください：
+
+- [API仕様](./api-reference.md) でエンドポイントの詳細を確認
+- [アーキテクチャ](./architecture.md) でシステム構成を理解
+- [FAQ](./faq.md) でよくある質問を確認
 
 ---
 
