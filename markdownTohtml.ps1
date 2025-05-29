@@ -53,8 +53,8 @@ if (-not (Test-Path $templatePath)) {
 $htmlFiles = Get-ChildItem "$OutputFolder\*.html" | Where-Object { $_.BaseName -ne "index" }
 $navigationLinks = ""
 foreach ($file in $htmlFiles) {
-    # 番号プレフィックス（01-, 02-など）を除去
-    $displayName = $file.BaseName -replace '^\d+-', ''
+    # 番号プレフィックス（010-, 020-, 030-など）を除去
+    $displayName = $file.BaseName -replace '^\d{2,3}-', ''
     $displayName = $displayName -replace '-', ' '
     $displayName = (Get-Culture).TextInfo.ToTitleCase($displayName)
     $navigationLinks += "        <li><a href=`"$($file.Name)`" target=`"content`">$displayName</a></li>`n"
@@ -65,7 +65,7 @@ $indexTemplate = Get-Content $templatePath -Encoding UTF8 -Raw
 
 # プレースホルダーを置換
 $indexHtml = $indexTemplate -replace '\{\{NAVIGATION_LINKS\}\}', $navigationLinks
-$indexHtml = $indexHtml -replace '\{\{DEFAULT_PAGE\}\}', '01-README.html'
+$indexHtml = $indexHtml -replace '\{\{DEFAULT_PAGE\}\}', '010-README.html'
 
 $indexPath = Join-Path $OutputFolder "index.html"
 [System.IO.File]::WriteAllText($indexPath, $indexHtml, (New-Object System.Text.UTF8Encoding $false))
