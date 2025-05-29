@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>getting-started</title>
+  <title>05-api-reference</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -91,53 +91,66 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">getting-started</h1>
+<h1 class="title">05-api-reference</h1>
 </header>
-<h1 id="始め方">🚀 始め方</h1>
+<h1 id="api仕様">🔧 API仕様</h1>
 <figure>
-<img src="../images/getting-started.svg" alt="始め方" />
-<figcaption aria-hidden="true">始め方</figcaption>
+<img src="../images/api-reference.svg" alt="API仕様" />
+<figcaption aria-hidden="true">API仕様</figcaption>
 </figure>
-<p>このガイドでは、プロジェクトを開始するための手順を説明します。</p>
-<h2 id="前提条件">前提条件</h2>
-<ul>
-<li>Node.js 18.0 以上</li>
-<li>Git がインストールされていること</li>
-</ul>
-<h2 id="クイックスタート">クイックスタート</h2>
-<h3 id="プロジェクトのクローン">1. プロジェクトのクローン</h3>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/your-repo/project.git</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> project</span></code></pre></div>
-<h3 id="依存関係のインストール">2. 依存関係のインストール</h3>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install</span></code></pre></div>
-<h3 id="設定ファイルの作成">3. 設定ファイルの作成</h3>
-<p>詳細な設定については <a href="./configuration.html">設定ページ</a>
-を参照してください。</p>
+<p>このドキュメントでは、REST API の詳細仕様を説明します。</p>
+<h2 id="ベースurl">ベースURL</h2>
+<pre><code>https://api.example.com/v1</code></pre>
+<h2 id="認証">認証</h2>
+<p>すべてのAPIエンドポイントはJWTトークンによる認証が必要です。</p>
+<pre class="http"><code>Authorization: Bearer {your-jwt-token}</code></pre>
+<h2 id="エンドポイント一覧">エンドポイント一覧</h2>
+<h3 id="ユーザー管理">ユーザー管理</h3>
+<h4 id="get-users">GET /users</h4>
+<p>ユーザー一覧を取得します。</p>
+<pre class="http"><code>GET /users</code></pre>
+<p><strong>レスポンス例:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;users&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;太郎&quot;</span><span class="fu">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;email&quot;</span><span class="fu">:</span> <span class="st">&quot;taro@example.com&quot;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <figure>
-<img src="../images/configuration.svg" alt="設定例" />
-<figcaption aria-hidden="true">設定例</figcaption>
+<img src="../images/api-response-example.svg" alt="APIレスポンス例" />
+<figcaption aria-hidden="true">APIレスポンス例</figcaption>
 </figure>
-<h2 id="次のステップ">次のステップ</h2>
-<p>セットアップが完了したら：</p>
-<ul>
-<li><a href="./architecture.html">アーキテクチャ</a>
-でシステム構造を理解する</li>
-<li><a href="./api-reference.html">API仕様</a> でAPIの使い方を学ぶ</li>
-<li><a href="./user-guide.html">ユーザーガイド</a>
-で基本操作を習得する</li>
-</ul>
-<p>問題が発生した場合は <a
-href="./troubleshooting.html">トラブルシューティング</a>
-を確認してください。</p>
+<h4 id="post-users">POST /users</h4>
+<p>新しいユーザーを作成します。</p>
+<pre class="http"><code>POST /users
+Content-Type: application/json
+
+{
+  &quot;name&quot;: &quot;花子&quot;,
+  &quot;email&quot;: &quot;hanako@example.com&quot;
+}</code></pre>
+<h3 id="データ管理">データ管理</h3>
+<p>詳細なデータ管理方法は <a
+href="./developer-guide.html">開発者ガイド</a> を参照してください。</p>
+<h2 id="エラーハンドリング">エラーハンドリング</h2>
+<p>APIエラーの詳細は <a
+href="./troubleshooting.md#APIエラー">トラブルシューティング</a>
+をご覧ください。</p>
+<figure>
+<img src="../images/error-codes.svg" alt="エラーコード一覧" />
+<figcaption aria-hidden="true">エラーコード一覧</figcaption>
+</figure>
 <hr />
 <h2 id="ナビゲーション">ナビゲーション</h2>
 <ul>
 <li><a href="./README.html">🏠 ホーム</a></li>
-<li><a href="./overview.html">📋 概要</a></li>
-<li><a href="./configuration.html">⚙️ 設定</a></li>
-<li><a href="./faq.html">❓ FAQ</a></li>
+<li><a href="./architecture.html">🏗️ アーキテクチャ</a></li>
+<li><a href="./developer-guide.html">👨‍💻 開発者ガイド</a></li>
+<li><a href="./troubleshooting.html">🔧 トラブルシューティング</a></li>
 </ul>
 </body>
 </html>
