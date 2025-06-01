@@ -93,135 +93,138 @@
 <header id="title-block-header">
 <h1 class="title">090-troubleshooting</h1>
 </header>
-<h1 id="トラブルシューティング">🔧 トラブルシューティング</h1>
+<h1 id="troubleshooting">🔧 Troubleshooting</h1>
 <figure>
-<img src="../images/troubleshooting.svg" alt="トラブルシューティング" />
-<figcaption aria-hidden="true">トラブルシューティング</figcaption>
+<img src="../images/troubleshooting.svg" alt="Troubleshooting" />
+<figcaption aria-hidden="true">Troubleshooting</figcaption>
 </figure>
-<p>よくある問題と解決方法をまとめています。</p>
-<h2 id="一般的な問題">一般的な問題</h2>
-<h3 id="サーバーが起動しない">サーバーが起動しない</h3>
-<p><strong>症状</strong>: <code>npm start</code> でエラーが発生する</p>
-<p><strong>解決方法</strong>: 1. Node.js のバージョンを確認
-(<code>node --version</code>) 2. 依存関係を再インストール
-(<code>npm install</code>) 3. 環境変数を確認 (<a
-href="./060-configuration.html">設定</a> を参照)</p>
+<p>This page summarizes common issues and their solutions.</p>
+<h2 id="common-issues">Common Issues</h2>
+<h3 id="server-wont-start">Server Won’t Start</h3>
+<p><strong>Symptom</strong>: Error occurs with
+<code>npm start</code></p>
+<p><strong>Solution</strong>: 1. Check Node.js version
+(<code>node --version</code>) 2. Reinstall dependencies
+(<code>npm install</code>) 3. Verify environment variables (refer to <a
+href="./060-configuration.html">Configuration</a>)</p>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 依存関係のクリーンインストール</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean install of dependencies</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> node_modules package-lock.json</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install</span></code></pre></div>
-<h3 id="データベース接続エラー">データベース接続エラー</h3>
-<p><strong>症状</strong>: <code>Database connection failed</code></p>
-<p><strong>解決方法</strong>: 1. PostgreSQL が起動しているか確認 2.
-接続文字列を確認 3. ファイアウォール設定を確認</p>
+<h3 id="database-connection-error">Database Connection Error</h3>
+<p><strong>Symptom</strong>: <code>Database connection failed</code></p>
+<p><strong>Solution</strong>: 1. Verify PostgreSQL is running 2. Check
+connection string 3. Verify firewall settings</p>
 <div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># PostgreSQL の状態確認</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check PostgreSQL status</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">systemctl</span> status postgresql</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 接続テスト</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connection</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> <span class="at">-h</span> localhost <span class="at">-U</span> username <span class="at">-d</span> database_name</span></code></pre></div>
-<h2 id="開発環境の問題">開発環境の問題</h2>
-<h3 id="hot-reload-が動作しない">Hot Reload が動作しない</h3>
-<p><strong>解決方法</strong>: 1. ファイル監視の設定を確認 2.
-ポート競合がないか確認 3. 開発サーバーを再起動</p>
+<h2 id="development-environment-issues">Development Environment
+Issues</h2>
+<h3 id="hot-reload-not-working">Hot Reload Not Working</h3>
+<p><strong>Solution</strong>: 1. Check file watching settings 2. Look
+for port conflicts 3. Restart development server</p>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 開発サーバーの再起動</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Restart development server</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev</span></code></pre></div>
-<h3 id="ビルドエラー">ビルドエラー</h3>
-<p><strong>症状</strong>: TypeScript コンパイルエラー</p>
-<p><strong>解決方法</strong>: 1. <code>tsconfig.json</code> の設定を確認
-2. 型定義ファイルを更新 3. キャッシュをクリア</p>
+<h3 id="build-errors">Build Errors</h3>
+<p><strong>Symptom</strong>: TypeScript compilation errors</p>
+<p><strong>Solution</strong>: 1. Check <code>tsconfig.json</code>
+settings 2. Update type definition files 3. Clear cache</p>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TypeScript キャッシュクリア</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Clear TypeScript cache</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> dist/ .tscache/</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run build</span></code></pre></div>
-<h2 id="apiエラー">APIエラー</h2>
+<h2 id="api-errors">API Errors</h2>
 <h3 id="unauthorized">401 Unauthorized</h3>
-<p><strong>原因</strong>: 認証トークンの問題</p>
-<p><strong>解決方法</strong>: 1. トークンの有効期限を確認 2. JWT
-シークレットキーを確認 3. 再ログインを実行</p>
+<p><strong>Cause</strong>: Authentication token issues</p>
+<p><strong>Solution</strong>: 1. Check token expiration 2. Verify JWT
+secret key 3. Re-login</p>
 <h3 id="not-found">404 Not Found</h3>
-<p><strong>原因</strong>: エンドポイントが存在しない</p>
-<p><strong>解決方法</strong>: 1. <a
-href="./050-api-reference.html">API仕様</a> でエンドポイントを確認 2.
-ルーティング設定を確認 3. サーバーログを確認</p>
+<p><strong>Cause</strong>: Endpoint does not exist</p>
+<p><strong>Solution</strong>: 1. Check the endpoint in <a
+href="./050-api-reference.html">API Specification</a> 2. Verify routing
+configuration 3. Check server logs</p>
 <h3 id="internal-server-error">500 Internal Server Error</h3>
-<p><strong>原因</strong>: サーバー内部エラー</p>
-<p><strong>解決方法</strong>: 1. サーバーログを確認 2.
-データベース接続を確認 3. エラースタックトレースを分析</p>
+<p><strong>Cause</strong>: Internal server error</p>
+<p><strong>Solution</strong>: 1. Check server logs 2. Verify database
+connection 3. Analyze error stack trace</p>
 <div class="sourceCode" id="cb5"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ログファイルの確認</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check log files</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-f</span> logs/error.log</span></code></pre></div>
-<h2 id="パフォーマンス問題">パフォーマンス問題</h2>
-<h3 id="レスポンスが遅い">レスポンスが遅い</h3>
-<p><strong>解決方法</strong>: 1. データベースクエリを最適化 2.
-キャッシュ設定を確認 3. <a
-href="./070-developer-guide.html#パフォーマンス最適化">パフォーマンス最適化</a>
-を参照</p>
-<h3 id="メモリ使用量が多い">メモリ使用量が多い</h3>
-<p><strong>解決方法</strong>: 1. メモリリークを確認 2.
-キャッシュサイズを調整 3. 不要なプロセスを終了</p>
+<h2 id="performance-issues">Performance Issues</h2>
+<h3 id="slow-response">Slow Response</h3>
+<p><strong>Solution</strong>: 1. Optimize database queries 2. Check
+cache settings 3. Refer to <a
+href="./070-developer-guide.md#performance-optimization">Performance
+Optimization</a></p>
+<h3 id="high-memory-usage">High Memory Usage</h3>
+<p><strong>Solution</strong>: 1. Check for memory leaks 2. Adjust cache
+size 3. Terminate unnecessary processes</p>
 <div class="sourceCode" id="cb6"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># メモリ使用量の確認</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check memory usage</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="at">--sort</span><span class="op">=</span>-%mem <span class="kw">|</span> <span class="fu">head</span> <span class="at">-10</span></span></code></pre></div>
-<h2 id="ネットワーク問題">ネットワーク問題</h2>
-<h3 id="接続タイムアウト">接続タイムアウト</h3>
-<p><strong>解決方法</strong>: 1. ネットワーク接続を確認 2.
-プロキシ設定を確認 3. DNSの動作を確認</p>
+<h2 id="network-issues">Network Issues</h2>
+<h3 id="connection-timeout">Connection Timeout</h3>
+<p><strong>Solution</strong>: 1. Check network connection 2. Verify
+proxy settings 3. Check DNS operation</p>
 <div class="sourceCode" id="cb7"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 接続テスト</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test connection</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="at">-I</span> http://localhost:3000/health</span></code></pre></div>
-<h2 id="docker関連の問題">Docker関連の問題</h2>
-<h3 id="コンテナが起動しない">コンテナが起動しない</h3>
-<p><strong>解決方法</strong>: 1. Dockerファイルの構文を確認 2.
-ベースイメージを確認 3. ポートマッピングを確認</p>
+<h2 id="docker-related-issues">Docker Related Issues</h2>
+<h3 id="container-wont-start">Container Won’t Start</h3>
+<p><strong>Solution</strong>: 1. Check Dockerfile syntax 2. Verify base
+image 3. Check port mapping</p>
 <div class="sourceCode" id="cb8"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># コンテナログの確認</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check container logs</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> logs container_name</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># コンテナの状態確認</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check container status</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">docker</span> ps <span class="at">-a</span></span></code></pre></div>
-<h2 id="ログとデバッグ">ログとデバッグ</h2>
-<h3 id="ログレベルの調整">ログレベルの調整</h3>
+<h2 id="logging-and-debugging">Logging and Debugging</h2>
+<h3 id="adjusting-log-level">Adjusting Log Level</h3>
 <div class="sourceCode" id="cb9"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 環境変数でログレベルを設定</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set log level with environment variable</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">LOG_LEVEL</span><span class="op">=</span>debug</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start</span></code></pre></div>
-<h3 id="デバッグモードの有効化">デバッグモードの有効化</h3>
+<h3 id="enabling-debug-mode">Enabling Debug Mode</h3>
 <div class="sourceCode" id="cb10"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># デバッグモードで起動</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start with debug mode</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">DEBUG</span><span class="op">=</span><span class="pp">*</span> <span class="ex">npm</span> run dev</span></code></pre></div>
-<h2 id="緊急時の対応">緊急時の対応</h2>
-<h3 id="システム復旧手順">システム復旧手順</h3>
+<h2 id="emergency-response">Emergency Response</h2>
+<h3 id="system-recovery-procedure">System Recovery Procedure</h3>
 <ol type="1">
-<li><p><strong>バックアップからの復元</strong></p>
+<li><p><strong>Restore from Backup</strong></p>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># データベース復元</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Database restoration</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pg_restore</span> <span class="at">-d</span> database_name backup_file.sql</span></code></pre></div></li>
-<li><p><strong>ログの確認</strong></p>
+<li><p><strong>Check Logs</strong></p>
 <div class="sourceCode" id="cb12"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># エラーログの確認</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check error logs</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-i</span> error logs/<span class="pp">*</span>.log</span></code></pre></div></li>
-<li><p><strong>システム状態の確認</strong></p>
+<li><p><strong>Check System Status</strong></p>
 <div class="sourceCode" id="cb13"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># プロセス確認</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check processes</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="kw">|</span> <span class="fu">grep</span> node</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ポート使用状況</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Check port usage</span></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">netstat</span> <span class="at">-tulpn</span> <span class="kw">|</span> <span class="fu">grep</span> :3000</span></code></pre></div></li>
 </ol>
-<h2 id="サポート情報">サポート情報</h2>
-<p>問題が解決しない場合:</p>
+<h2 id="support-information">Support Information</h2>
+<p>If the issue isn’t resolved:</p>
 <ol type="1">
-<li><a href="./100-faq.html">FAQ</a> を確認</li>
-<li><a href="./070-developer-guide.html">開発者ガイド</a> を参照</li>
-<li>ログファイルを添付してサポートに連絡</li>
+<li>Check <a href="./100-faq.html">FAQ</a></li>
+<li>Refer to <a href="./070-developer-guide.html">Developer
+Guide</a></li>
+<li>Contact support with log files attached</li>
 </ol>
 <hr />
-<h2 id="ナビゲーション">ナビゲーション</h2>
+<h2 id="navigation">Navigation</h2>
 <ul>
-<li><a href="./010-README.html">🏠 ホーム</a></li>
-<li><a href="./060-configuration.html">⚙️ 設定</a></li>
-<li><a href="./050-api-reference.html">🔧 API仕様</a></li>
+<li><a href="./010-README.html">🏠 Home</a></li>
+<li><a href="./060-configuration.html">⚙️ Configuration</a></li>
+<li><a href="./050-api-reference.html">🔧 API Specification</a></li>
 <li><a href="./100-faq.html">❓ FAQ</a></li>
 </ul>
 </body>

@@ -1,34 +1,34 @@
-# 📋 プロジェクト概要
+# 📋 Project Overview
 
-![プロジェクト概要](../images/project-overview.svg)
+![Project Overview](../images/project-overview.svg)
 
-## 目的
+## Purpose
 
-このプロジェクトは、効率的なドキュメント管理と情報共有を目的としています。
+This project aims to provide efficient document management and information sharing.
 
-## 主な機能
+## Key Features
 
-- ✅ 構造化されたドキュメント
-- ✅ 相互リンクによるナビゲーション
-- ✅ 視覚的な図解とイメージ
+- ✅ Structured documents
+- ✅ Navigation through interconnected links
+- ✅ Visual diagrams and images
 
-## アーキテクチャ概要
+## Architecture Overview
 
-システムの詳細なアーキテクチャについては [アーキテクチャページ](./040-architecture.html) をご覧ください。
+For detailed system architecture, please refer to the [Architecture page](./040-architecture.md).
 
-![システム概要図](../images/system-overview.svg)
+![System Overview](../images/system-overview.svg)
 
-## 次のステップ
+## Next Steps
 
-1. [始め方](./030-getting-started.html) でセットアップを行う
-2. [ユーザーガイド](./080-user-guide.html) で基本的な使い方を学ぶ
-3. [開発者ガイド](./070-developer-guide.html) で開発環境を構築する
+1. Set up with the [Getting Started](./030-getting-started.md) guide
+2. Learn basic usage in the [User Guide](./080-user-guide.md)
+3. Configure your development environment with the [Developer Guide](./070-developer-guide.md)
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [🚀 始め方](./030-getting-started.html)
-- [🏗️ アーキテクチャ](./040-architecture.html)
-- [📚 ユーザーガイド](./080-user-guide.html)
+- [🏠 Home](./010-README.md)
+- [🚀 Getting Started](./030-getting-started.md)
+- [🏗️ Architecture](./040-architecture.md)
+- [📚 User Guide](./080-user-guide.md)

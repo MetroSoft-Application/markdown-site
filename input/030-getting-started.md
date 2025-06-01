@@ -1,50 +1,50 @@
-# 🚀 始め方
+# 🚀 Getting Started
 
-![始め方](../images/getting-started.svg)
+![Getting Started](../images/getting-started.svg)
 
-このガイドでは、プロジェクトを開始するための手順を説明します。
+This guide explains the steps to start using the project.
 
-## 前提条件
+## Prerequisites
 
-- Node.js 18.0 以上
-- Git がインストールされていること
+- Node.js 18.0 or later
+- Git installed
 
-## クイックスタート
+## Quick Start
 
-### 1. プロジェクトのクローン
+### 1. Clone the Project
 
 ```bash
 git clone https://github.com/your-repo/project.git
 cd project
 ```
 
-### 2. 依存関係のインストール
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. 設定ファイルの作成
+### 3. Create Configuration Files
 
-詳細な設定については [設定ページ](./060-configuration.html) を参照してください。
+For detailed configuration, please refer to the [Configuration page](./060-configuration.md).
 
-![設定例](../images/configuration.svg)
+![Configuration Example](../images/configuration.svg)
 
-## 次のステップ
+## Next Steps
 
-セットアップが完了したら：
+Once setup is complete:
 
-- [アーキテクチャ](./040-architecture.html) でシステム構造を理解する
-- [API仕様](./050-api-reference.html) でAPIの使い方を学ぶ
-- [ユーザーガイド](./080-user-guide.html) で基本操作を習得する
+- Understand the system structure in [Architecture](./040-architecture.md)
+- Learn how to use the API in [API Specification](./050-api-reference.md)
+- Master basic operations in [User Guide](./080-user-guide.md)
 
-問題が発生した場合は [トラブルシューティング](./090-troubleshooting.html) を確認してください。
+If you encounter any issues, please check the [Troubleshooting](./090-troubleshooting.md) page.
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [📋 概要](./020-overview.html)
-- [⚙️ 設定](./060-configuration.html)
-- [❓ FAQ](./100-faq.html)
+- [🏠 Home](./010-README.md)
+- [📋 Overview](./020-overview.md)
+- [⚙️ Configuration](./060-configuration.md)
+- [❓ FAQ](./100-faq.md)

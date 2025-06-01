@@ -20,14 +20,13 @@
   <rect x="610" y="135" width="100" height="8" fill="rgba(255,255,255,0.2)" rx="4"/>
   <rect x="610" y="150" width="110" height="8" fill="rgba(255,255,255,0.25)" rx="4"/>
   <rect x="610" y="165" width="80" height="8" fill="rgba(255,255,255,0.2)" rx="4"/>
-  
-  <!-- メインタイトル -->
+    <!-- メインタイトル -->
   <text x="400" y="100" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
-    開発者ガイド
+    Developer Guide
   </text>
   
   <!-- サブタイトル -->
   <text x="400" y="130" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.9)" text-anchor="middle">
-    開発環境・API・テスト・パフォーマンス最適化
+    Development Environment・API・Testing・Performance Optimization
   </text>
 </svg>

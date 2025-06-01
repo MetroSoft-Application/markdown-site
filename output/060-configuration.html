@@ -93,22 +93,23 @@
 <header id="title-block-header">
 <h1 class="title">060-configuration</h1>
 </header>
-<h1 id="設定">⚙️ 設定</h1>
+<h1 id="configuration">⚙️ Configuration</h1>
 <figure>
-<img src="../images/configuration.svg" alt="設定" />
-<figcaption aria-hidden="true">設定</figcaption>
+<img src="../images/configuration.svg" alt="Configuration" />
+<figcaption aria-hidden="true">Configuration</figcaption>
 </figure>
-<p>このページでは、システムの各種設定方法について説明します。</p>
-<h2 id="環境設定">環境設定</h2>
-<h3 id="環境変数">環境変数</h3>
+<p>This page explains the various configuration methods for the
+system.</p>
+<h2 id="environment-setup">Environment Setup</h2>
+<h3 id="environment-variables">Environment Variables</h3>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># .env ファイルの例</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example .env file</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="va">NODE_ENV</span><span class="op">=</span>development</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="va">PORT</span><span class="op">=</span>3000</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="va">DATABASE_URL</span><span class="op">=</span>postgresql://username:password@localhost:5432/dbname</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="va">REDIS_URL</span><span class="op">=</span>redis://localhost:6379</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="va">JWT_SECRET</span><span class="op">=</span>your-super-secret-jwt-key</span></code></pre></div>
-<h3 id="データベース設定">データベース設定</h3>
+<h3 id="database-configuration">Database Configuration</h3>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// database.config.ts</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> databaseConfig <span class="op">=</span> {</span>
@@ -127,8 +128,8 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb2-
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    password<span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">DB_PASSWORD</span></span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
-<h2 id="アプリケーション設定">アプリケーション設定</h2>
-<h3 id="ログ設定">ログ設定</h3>
+<h2 id="application-configuration">Application Configuration</h2>
+<h3 id="logging-configuration">Logging Configuration</h3>
 <div class="sourceCode" id="cb3"><pre
 class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;logging&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
@@ -142,14 +143,13 @@ class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
 <span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
-<h3 id="キャッシュ設定">キャッシュ設定</h3>
-<p>Redis キャッシュの設定については <a
-href="./040-architecture.html">アーキテクチャ</a>
-で詳細を確認してください。</p>
+<h3 id="cache-configuration">Cache Configuration</h3>
+<p>For Redis cache configuration details, please check <a
+href="./040-architecture.html">Architecture</a>.</p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// cache.config.ts</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> cacheConfig <span class="op">=</span> {</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  ttl<span class="op">:</span> <span class="dv">3600</span><span class="op">,</span> <span class="co">// 1時間</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  ttl<span class="op">:</span> <span class="dv">3600</span><span class="op">,</span> <span class="co">// 1 hour</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  maxKeys<span class="op">:</span> <span class="dv">1000</span><span class="op">,</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  redis<span class="op">:</span> {</span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    host<span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">REDIS_HOST</span> <span class="op">||</span> <span class="st">&#39;localhost&#39;</span><span class="op">,</span></span>
@@ -157,8 +157,8 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb4-
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    db<span class="op">:</span> <span class="dv">0</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
-<h2 id="セキュリティ設定">セキュリティ設定</h2>
-<h3 id="jwt設定">JWT設定</h3>
+<h2 id="security-configuration">Security Configuration</h2>
+<h3 id="jwt-configuration">JWT Configuration</h3>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// auth.config.ts</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> authConfig <span class="op">=</span> {</span>
@@ -171,7 +171,7 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb5-
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    saltRounds<span class="op">:</span> <span class="dv">12</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
-<h3 id="cors設定">CORS設定</h3>
+<h3 id="cors-configuration">CORS Configuration</h3>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// cors.config.ts</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> corsConfig <span class="op">=</span> {</span>
@@ -179,8 +179,9 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb6-
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  credentials<span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  optionsSuccessStatus<span class="op">:</span> <span class="dv">200</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
-<h2 id="本番環境設定">本番環境設定</h2>
-<h3 id="docker設定">Docker設定</h3>
+<h2 id="production-environment-configuration">Production Environment
+Configuration</h2>
+<h3 id="docker-configuration">Docker Configuration</h3>
 <div class="sourceCode" id="cb7"><pre
 class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dockerfile</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> node:18-alpine</span>
@@ -190,7 +191,8 @@ class="sourceCode dockerfile"><code class="sourceCode dockerfile"><span id="cb7-
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> . .</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">EXPOSE</span> 3000</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="kw">CMD</span> [<span class="st">&quot;npm&quot;</span>, <span class="st">&quot;start&quot;</span>]</span></code></pre></div>
-<h3 id="環境変数本番">環境変数（本番）</h3>
+<h3 id="environment-variables-production">Environment Variables
+(Production)</h3>
 <div class="sourceCode" id="cb8"><pre
 class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># production.env</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="va">NODE_ENV</span><span class="op">=</span>production</span>
@@ -200,11 +202,11 @@ class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="va">JWT_SECRET</span><span class="op">=</span>super-secure-production-secret</span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="va">LOG_LEVEL</span><span class="op">=</span>warn</span></code></pre></div>
 <hr />
-<h2 id="ナビゲーション">ナビゲーション</h2>
+<h2 id="navigation">Navigation</h2>
 <ul>
-<li><a href="./010-README.html">🏠 ホーム</a></li>
-<li><a href="./030-getting-started.html">🚀 始め方</a></li>
-<li><a href="./040-architecture.html">🏗️ アーキテクチャ</a></li>
+<li><a href="./010-README.html">🏠 Home</a></li>
+<li><a href="./030-getting-started.html">🚀 Getting Started</a></li>
+<li><a href="./040-architecture.html">🏗️ Architecture</a></li>
 <li><a href="./100-faq.html">❓ FAQ</a></li>
 </ul>
 </body>

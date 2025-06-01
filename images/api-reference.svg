@@ -14,15 +14,14 @@
   
   <!-- グリッドパターン -->
   <rect width="800" height="200" fill="url(#gridPattern)" />
-  
-  <!-- メインタイトル -->
+    <!-- メインタイトル -->
   <text x="400" y="80" font-family="Arial, sans-serif" font-size="42" fill="white" text-anchor="middle" dominant-baseline="middle" font-weight="bold">
-    🔧 API仕様書
+    🔧 API Specification
   </text>
   
   <!-- サブタイトル -->
   <text x="400" y="120" font-family="Arial, sans-serif" font-size="18" fill="rgba(255,255,255,0.9)" text-anchor="middle" dominant-baseline="middle">
-    RESTful API ドキュメント
+    RESTful API Documentation
   </text>
   
   <!-- 装飾要素 -->

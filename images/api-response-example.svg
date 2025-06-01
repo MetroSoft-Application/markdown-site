@@ -1,9 +1,8 @@
 <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
-  
-  <!-- タイトル -->
+    <!-- タイトル -->
   <text x="300" y="30" font-family="Arial, sans-serif" font-size="20" fill="#495057" text-anchor="middle" font-weight="bold">
-    📊 APIレスポンス例
+    📊 API Response Example
   </text>
   
   <!-- リクエスト部分 -->
@@ -43,9 +42,8 @@
   </text>
   <text x="130" y="300" font-family="monospace" font-size="11" fill="#1b5e20">
     {
-  </text>
-  <text x="145" y="315" font-family="monospace" font-size="11" fill="#d32f2f">
-    "id": 1, "name": "太郎", "email": "taro@example.com"
+  </text>  <text x="145" y="315" font-family="monospace" font-size="11" fill="#d32f2f">
+    "id": 1, "name": "Taro", "email": "taro@example.com"
   </text>
   <text x="130" y="330" font-family="monospace" font-size="11" fill="#1b5e20">
     }

@@ -1,138 +1,133 @@
 <svg width="700" height="500" xmlns="http://www.w3.org/2000/svg">
   <rect width="700" height="500" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
-  
-  <!-- タイトル -->
+    <!-- Title -->
   <text x="350" y="30" font-family="Arial, sans-serif" font-size="24" fill="#212529" text-anchor="middle" font-weight="bold">
-    データフロー図
+    Data Flow Diagram
   </text>
   
-  <!-- ユーザーリクエスト -->
+  <!-- User Request -->
   <ellipse cx="100" cy="100" rx="80" ry="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
   <text x="100" y="95" font-family="Arial, sans-serif" font-size="12" fill="#1976d2" text-anchor="middle" font-weight="bold">
-    👤 ユーザー
+    👤 User
   </text>
   <text x="100" y="110" font-family="Arial, sans-serif" font-size="12" fill="#1976d2" text-anchor="middle">
-    リクエスト
+    Request
   </text>
-  
-  <!-- リンク解析 -->
+    <!-- Link Analysis -->
   <rect x="200" y="70" width="120" height="60" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
   <text x="260" y="90" font-family="Arial, sans-serif" font-size="12" fill="#388e3c" text-anchor="middle" font-weight="bold">
-    🔗 リンク解析
+    🔗 Link Analysis
   </text>
   <text x="260" y="105" font-family="Arial, sans-serif" font-size="10" fill="#388e3c" text-anchor="middle">
-    相互参照検出
+    Cross-ref Detection
   </text>
   <text x="260" y="120" font-family="Arial, sans-serif" font-size="10" fill="#388e3c" text-anchor="middle">
-    依存関係分析
+    Dependency Analysis
   </text>
   
-  <!-- マークダウン処理 -->
+  <!-- Markdown Processing -->
   <rect x="350" y="70" width="120" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
   <text x="410" y="90" font-family="Arial, sans-serif" font-size="12" fill="#f57c00" text-anchor="middle" font-weight="bold">
-    📄 MD処理
+    📄 MD Processing
   </text>
   <text x="410" y="105" font-family="Arial, sans-serif" font-size="10" fill="#f57c00" text-anchor="middle">
-    構文解析
+    Parsing
   </text>
   <text x="410" y="120" font-family="Arial, sans-serif" font-size="10" fill="#f57c00" text-anchor="middle">
-    HTML変換
+    HTML Conversion
   </text>
   
-  <!-- 画像処理 -->
+  <!-- Image Processing -->
   <rect x="500" y="70" width="120" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
   <text x="560" y="90" font-family="Arial, sans-serif" font-size="12" fill="#7b1fa2" text-anchor="middle" font-weight="bold">
-    🖼️ 画像処理
+    🖼️ Image Processing
   </text>
   <text x="560" y="105" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2" text-anchor="middle">
-    最適化
+    Optimization
   </text>
   <text x="560" y="120" font-family="Arial, sans-serif" font-size="10" fill="#7b1fa2" text-anchor="middle">
-    レスポンシブ
+    Responsive
   </text>
-  
-  <!-- データストア -->
+    <!-- Data Store -->
   <rect x="50" y="200" width="100" height="80" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="5"/>
   <text x="100" y="225" font-family="Arial, sans-serif" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">
-    📁 ファイル
+    📁 File
   </text>
   <text x="100" y="240" font-family="Arial, sans-serif" font-size="12" fill="#d32f2f" text-anchor="middle" font-weight="bold">
-    ストレージ
+    Storage
   </text>
   <text x="100" y="260" font-family="Arial, sans-serif" font-size="10" fill="#d32f2f" text-anchor="middle">
     .md files
   </text>
   
-  <!-- メタデータDB -->
+  <!-- Metadata DB -->
   <rect x="200" y="200" width="100" height="80" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2" rx="5"/>
   <text x="250" y="225" font-family="Arial, sans-serif" font-size="12" fill="#3f51b5" text-anchor="middle" font-weight="bold">
-    🗄️ メタデータ
+    🗄️ Metadata
   </text>
   <text x="250" y="240" font-family="Arial, sans-serif" font-size="12" fill="#3f51b5" text-anchor="middle" font-weight="bold">
-    データベース
+    Database
   </text>
   <text x="250" y="260" font-family="Arial, sans-serif" font-size="10" fill="#3f51b5" text-anchor="middle">
     Links, Tags
   </text>
   
-  <!-- キャッシュ -->
+  <!-- Cache -->
   <rect x="350" y="200" width="100" height="80" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="5"/>
   <text x="400" y="225" font-family="Arial, sans-serif" font-size="12" fill="#00695c" text-anchor="middle" font-weight="bold">
-    ⚡ キャッシュ
+    ⚡ Cache
   </text>
   <text x="400" y="240" font-family="Arial, sans-serif" font-size="12" fill="#00695c" text-anchor="middle" font-weight="bold">
-    レイヤー
+    Layer
   </text>
   <text x="400" y="260" font-family="Arial, sans-serif" font-size="10" fill="#00695c" text-anchor="middle">
     Redis
   </text>
   
-  <!-- 検索インデックス -->
+  <!-- Search Index -->
   <rect x="500" y="200" width="100" height="80" fill="#fff8e1" stroke="#ff8f00" stroke-width="2" rx="5"/>
   <text x="550" y="225" font-family="Arial, sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle" font-weight="bold">
-    🔍 検索
+    🔍 Search
   </text>
   <text x="550" y="240" font-family="Arial, sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle" font-weight="bold">
-    インデックス
+    Index
   </text>
   <text x="550" y="260" font-family="Arial, sans-serif" font-size="10" fill="#ff8f00" text-anchor="middle">
     Elasticsearch
   </text>
-  
-  <!-- レスポンス生成 -->
+    <!-- Response Generation -->
   <rect x="275" y="350" width="150" height="60" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" rx="5"/>
   <text x="350" y="375" font-family="Arial, sans-serif" font-size="14" fill="#0277bd" text-anchor="middle" font-weight="bold">
-    📤 レスポンス生成
+    📤 Response Generation
   </text>
   <text x="350" y="395" font-family="Arial, sans-serif" font-size="12" fill="#0277bd" text-anchor="middle">
-    HTML + JSON 出力
+    HTML + JSON Output
   </text>
-  
-  <!-- フロー矢印 -->
-  <!-- リクエストフロー -->
+    <!-- Flow Arrows -->
+  <!-- Request Flow -->
   <path d="M 180 100 L 200 100" stroke="#2196f3" stroke-width="3" marker-end="url(#blueArrow)"/>
   <path d="M 320 100 L 350 100" stroke="#2196f3" stroke-width="3" marker-end="url(#blueArrow)"/>
   <path d="M 470 100 L 500 100" stroke="#2196f3" stroke-width="3" marker-end="url(#blueArrow)"/>
   
-  <!-- データアクセス -->
+  <!-- Data Access -->
   <path d="M 260 130 L 250 200" stroke="#4caf50" stroke-width="2" marker-end="url(#greenArrow)"/>
   <path d="M 410 130 L 400 200" stroke="#4caf50" stroke-width="2" marker-end="url(#greenArrow)"/>
   <path d="M 560 130 L 550 200" stroke="#4caf50" stroke-width="2" marker-end="url(#greenArrow)"/>
   
-  <!-- ファイルアクセス -->
+  <!-- File Access -->
   <path d="M 150 200 L 100 200" stroke="#ff9800" stroke-width="2" marker-end="url(#orangeArrow)"/>
   
-  <!-- レスポンス生成への集約 -->
+  <!-- Response Generation Aggregation -->
   <path d="M 250 280 L 320 350" stroke="#9c27b0" stroke-width="2" marker-end="url(#purpleArrow)"/>
   <path d="M 400 280 L 350 350" stroke="#9c27b0" stroke-width="2" marker-end="url(#purpleArrow)"/>
   <path d="M 550 280 L 380 350" stroke="#9c27b0" stroke-width="2" marker-end="url(#purpleArrow)"/>
   
-  <!-- ユーザーへの返答 -->
+  <!-- Response to User -->
   <path d="M 275 380 L 180 100" stroke="#f44336" stroke-width="3" marker-end="url(#redArrow)" stroke-dasharray="5,5"/>
   
-  <!-- データフロー説明 -->
+  <!-- Data Flow Explanation -->
   <text x="50" y="450" font-family="Arial, sans-serif" font-size="12" fill="#666">
-    🔵 リクエスト処理  🟢 データアクセス  🟠 ファイル読み込み  🟣 レスポンス集約  🔴 結果返却
+    🔵 Request Processing  🟢 Data Access  🟠 File Reading  🟣 Response Aggregation  🔴 Result Return
   </text>
   
   <!-- 矢印の定義 -->

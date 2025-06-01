@@ -93,66 +93,65 @@
 <header id="title-block-header">
 <h1 class="title">050-api-reference</h1>
 </header>
-<h1 id="api仕様">🔧 API仕様</h1>
+<h1 id="api-specification">🔧 API Specification</h1>
 <figure>
-<img src="../images/api-reference.svg" alt="API仕様" />
-<figcaption aria-hidden="true">API仕様</figcaption>
+<img src="../images/api-reference.svg" alt="API Specification" />
+<figcaption aria-hidden="true">API Specification</figcaption>
 </figure>
-<p>このドキュメントでは、REST API の詳細仕様を説明します。</p>
-<h2 id="ベースurl">ベースURL</h2>
+<p>This document describes the detailed specifications of the REST
+API.</p>
+<h2 id="base-url">Base URL</h2>
 <pre><code>https://api.example.com/v1</code></pre>
-<h2 id="認証">認証</h2>
-<p>すべてのAPIエンドポイントはJWTトークンによる認証が必要です。</p>
+<h2 id="authentication">Authentication</h2>
+<p>All API endpoints require authentication with a JWT token.</p>
 <pre class="http"><code>Authorization: Bearer {your-jwt-token}</code></pre>
-<h2 id="エンドポイント一覧">エンドポイント一覧</h2>
-<h3 id="ユーザー管理">ユーザー管理</h3>
+<h2 id="endpoint-list">Endpoint List</h2>
+<h3 id="user-management">User Management</h3>
 <h4 id="get-users">GET /users</h4>
-<p>ユーザー一覧を取得します。</p>
+<p>Retrieves a list of users.</p>
 <pre class="http"><code>GET /users</code></pre>
-<p><strong>レスポンス例:</strong></p>
+<p><strong>Response Example:</strong></p>
 <div class="sourceCode" id="cb4"><pre
 class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;users&quot;</span><span class="fu">:</span> <span class="ot">[</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">{</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="dv">1</span><span class="fu">,</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;太郎&quot;</span><span class="fu">,</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;email&quot;</span><span class="fu">:</span> <span class="st">&quot;taro@example.com&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;John&quot;</span><span class="fu">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&quot;email&quot;</span><span class="fu">:</span> <span class="st">&quot;john@example.com&quot;</span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">}</span></span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span></span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
 <figure>
-<img src="../images/api-response-example.svg" alt="APIレスポンス例" />
-<figcaption aria-hidden="true">APIレスポンス例</figcaption>
+<img src="../images/api-response-example.svg"
+alt="API Response Example" />
+<figcaption aria-hidden="true">API Response Example</figcaption>
 </figure>
 <h4 id="post-users">POST /users</h4>
-<p>新しいユーザーを作成します。</p>
+<p>Creates a new user.</p>
 <pre class="http"><code>POST /users
 Content-Type: application/json
 
 {
-  &quot;name&quot;: &quot;花子&quot;,
-  &quot;email&quot;: &quot;hanako@example.com&quot;
+  &quot;name&quot;: &quot;Jane&quot;,
+  &quot;email&quot;: &quot;jane@example.com&quot;
 }</code></pre>
-<h3 id="データ管理">データ管理</h3>
-<p>詳細なデータ管理方法は <a
-href="./070-developer-guide.html">開発者ガイド</a>
-を参照してください。</p>
-<h2 id="エラーハンドリング">エラーハンドリング</h2>
-<p>APIエラーの詳細は <a
-href="./090-troubleshooting.html#APIエラー">トラブルシューティング</a>
-をご覧ください。</p>
+<h3 id="data-management">Data Management</h3>
+<p>For detailed data management methods, please refer to the <a
+href="./070-developer-guide.html">Developer Guide</a>.</p>
+<h2 id="error-handling">Error Handling</h2>
+<p>For details on API errors, please see <a
+href="./090-troubleshooting.md#api-errors">Troubleshooting</a>.</p>
 <figure>
-<img src="../images/error-codes.svg" alt="エラーコード一覧" />
-<figcaption aria-hidden="true">エラーコード一覧</figcaption>
+<img src="../images/error-codes.svg" alt="Error Code List" />
+<figcaption aria-hidden="true">Error Code List</figcaption>
 </figure>
 <hr />
-<h2 id="ナビゲーション">ナビゲーション</h2>
+<h2 id="navigation">Navigation</h2>
 <ul>
-<li><a href="./010-README.html">🏠 ホーム</a></li>
-<li><a href="./040-architecture.html">🏗️ アーキテクチャ</a></li>
-<li><a href="./070-developer-guide.html">👨‍💻 開発者ガイド</a></li>
-<li><a href="./090-troubleshooting.html">🔧
-トラブルシューティング</a></li>
+<li><a href="./010-README.html">🏠 Home</a></li>
+<li><a href="./040-architecture.html">🏗️ Architecture</a></li>
+<li><a href="./070-developer-guide.html">👨‍💻 Developer Guide</a></li>
+<li><a href="./090-troubleshooting.html">🔧 Troubleshooting</a></li>
 </ul>
 </body>
 </html>

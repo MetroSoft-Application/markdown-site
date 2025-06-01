@@ -6,16 +6,15 @@
   </defs>
   
   <rect width="800" height="600" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
-  
-  <!-- タイトル -->
+    <!-- Title -->
   <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" fill="#212529" text-anchor="middle" font-weight="bold">
-    システムアーキテクチャ
+    System Architecture
   </text>
   
-  <!-- ユーザー -->
+  <!-- User -->
   <rect x="350" y="60" width="100" height="40" fill="#6f42c1" stroke="#ffffff" stroke-width="2" rx="20"/>
   <text x="400" y="85" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    ユーザー
+    User
   </text>
   
   <!-- ロードバランサー -->
@@ -57,8 +56,7 @@
   <text x="640" y="250" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">
     Image Service
   </text>
-  
-  <!-- キャッシュ層 -->
+    <!-- Cache Layer -->
   <rect x="50" y="300" width="200" height="60" fill="#dc3545" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="150" y="325" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
     Redis Cache
@@ -67,7 +65,7 @@
     Session &amp; Link Cache
   </text>
   
-  <!-- 検索エンジン -->
+  <!-- Search Engine -->
   <rect x="300" y="300" width="200" height="60" fill="#fd7e14" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="400" y="325" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
     Elasticsearch
@@ -84,8 +82,7 @@
   <text x="650" y="345" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Static Assets
   </text>
-  
-  <!-- データベース -->
+    <!-- Database -->
   <rect x="100" y="400" width="150" height="80" fill="#6610f2" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="175" y="425" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
     PostgreSQL
@@ -108,8 +105,7 @@
   <text x="375" y="460" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Images &amp; Assets
   </text>
-  
-  <!-- 監視システム -->
+    <!-- Monitoring System -->
   <rect x="500" y="400" width="150" height="80" fill="#ffc107" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="575" y="425" font-family="Arial, sans-serif" font-size="14" fill="black" text-anchor="middle" font-weight="bold">
     Monitoring
@@ -121,7 +117,7 @@
     Grafana
   </text>
   
-  <!-- バックアップ -->
+  <!-- Backup -->
   <rect x="300" y="520" width="200" height="60" fill="#6c757d" stroke="#ffffff" stroke-width="2" rx="5"/>
   <text x="400" y="545" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
     Backup System
@@ -129,26 +125,25 @@
   <text x="400" y="565" font-family="Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">
     Daily Automated Backup
   </text>
-  
-  <!-- 接続線 -->
-  <!-- ユーザーからロードバランサー -->
+    <!-- Connection Lines -->
+  <!-- User to Load Balancer -->
   <path d="M 400 100 L 400 130" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   
-  <!-- ロードバランサーからWebサーバー -->
+  <!-- Load Balancer to Web Servers -->
   <path d="M 350 170 L 160 200" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   <path d="M 400 170 L 400 200" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   <path d="M 450 170 L 640 200" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   
-  <!-- WebサーバーからDB/キャッシュ -->
+  <!-- Web Servers to DB/Cache -->
   <path d="M 160 260 L 150 300" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   <path d="M 400 260 L 400 300" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   <path d="M 640 260 L 650 300" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   
-  <!-- DB層への接続 -->
+  <!-- Connection to DB Layer -->
   <path d="M 150 360 L 175 400" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   <path d="M 400 360 L 375 400" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   <path d="M 650 360 L 575 400" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   
-  <!-- バックアップへの接続 -->
+  <!-- Connection to Backup -->
   <path d="M 375 480 L 400 520" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
 </svg>

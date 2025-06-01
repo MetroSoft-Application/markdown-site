@@ -1,15 +1,15 @@
-# ⚙️ 設定
+# ⚙️ Configuration
 
-![設定](../images/configuration.svg)
+![Configuration](../images/configuration.svg)
 
-このページでは、システムの各種設定方法について説明します。
+This page explains the various configuration methods for the system.
 
-## 環境設定
+## Environment Setup
 
-### 環境変数
+### Environment Variables
 
 ```bash
-# .env ファイルの例
+# Example .env file
 NODE_ENV=development
 PORT=3000
 DATABASE_URL=postgresql://username:password@localhost:5432/dbname
@@ -17,7 +17,7 @@ REDIS_URL=redis://localhost:6379
 JWT_SECRET=your-super-secret-jwt-key
 ```
 
-### データベース設定
+### Database Configuration
 
 ```typescript
 // database.config.ts
@@ -39,9 +39,9 @@ export const databaseConfig = {
 };
 ```
 
-## アプリケーション設定
+## Application Configuration
 
-### ログ設定
+### Logging Configuration
 
 ```json
 {
@@ -58,14 +58,14 @@ export const databaseConfig = {
 }
 ```
 
-### キャッシュ設定
+### Cache Configuration
 
-Redis キャッシュの設定については [アーキテクチャ](./040-architecture.html) で詳細を確認してください。
+For Redis cache configuration details, please check [Architecture](./040-architecture.md).
 
 ```typescript
 // cache.config.ts
 export const cacheConfig = {
-  ttl: 3600, // 1時間
+  ttl: 3600, // 1 hour
   maxKeys: 1000,
   redis: {
     host: process.env.REDIS_HOST || 'localhost',
@@ -75,9 +75,9 @@ export const cacheConfig = {
 };
 ```
 
-## セキュリティ設定
+## Security Configuration
 
-### JWT設定
+### JWT Configuration
 
 ```typescript
 // auth.config.ts
@@ -93,7 +93,7 @@ export const authConfig = {
 };
 ```
 
-### CORS設定
+### CORS Configuration
 
 ```typescript
 // cors.config.ts
@@ -104,9 +104,9 @@ export const corsConfig = {
 };
 ```
 
-## 本番環境設定
+## Production Environment Configuration
 
-### Docker設定
+### Docker Configuration
 
 ```dockerfile
 # Dockerfile
@@ -119,7 +119,7 @@ EXPOSE 3000
 CMD ["npm", "start"]
 ```
 
-### 環境変数（本番）
+### Environment Variables (Production)
 
 ```bash
 # production.env
@@ -133,9 +133,9 @@ LOG_LEVEL=warn
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [🚀 始め方](./030-getting-started.html)
-- [🏗️ アーキテクチャ](./040-architecture.html)
-- [❓ FAQ](./100-faq.html)
+- [🏠 Home](./010-README.md)
+- [🚀 Getting Started](./030-getting-started.md)
+- [🏗️ Architecture](./040-architecture.md)
+- [❓ FAQ](./100-faq.md)

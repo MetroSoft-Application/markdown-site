@@ -93,31 +93,34 @@
 <header id="title-block-header">
 <h1 class="title">070-developer-guide</h1>
 </header>
-<h1 id="開発者ガイド">👨‍💻 開発者ガイド</h1>
+<h1 id="developer-guide">👨‍💻 Developer Guide</h1>
 <figure>
-<img src="../images/developer-guide.svg" alt="開発者ガイド" />
-<figcaption aria-hidden="true">開発者ガイド</figcaption>
+<img src="../images/developer-guide.svg" alt="Developer Guide" />
+<figcaption aria-hidden="true">Developer Guide</figcaption>
 </figure>
-<p>このガイドでは、開発者向けの詳細な技術情報を提供します。</p>
-<h2 id="開発環境のセットアップ">開発環境のセットアップ</h2>
-<p>基本的なセットアップは <a
-href="./030-getting-started.html">始め方</a> を参照してください。</p>
-<h3 id="追加の開発ツール">追加の開発ツール</h3>
+<p>This guide provides detailed technical information for
+developers.</p>
+<h2 id="development-environment-setup">Development Environment
+Setup</h2>
+<p>For basic setup, please refer to <a
+href="./030-getting-started.html">Getting Started</a>.</p>
+<h3 id="additional-development-tools">Additional Development Tools</h3>
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 開発用依存関係のインストール</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install development dependencies</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">--dev</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># テストの実行</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run tests</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> test</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 開発サーバーの起動</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Start development server</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run dev</span></code></pre></div>
 <figure>
-<img src="../images/development-environment.svg" alt="開発環境" />
-<figcaption aria-hidden="true">開発環境</figcaption>
+<img src="../images/development-environment.svg"
+alt="Development Environment" />
+<figcaption aria-hidden="true">Development Environment</figcaption>
 </figure>
-<h2 id="コードスタイル">コードスタイル</h2>
-<h3 id="typescript設定">TypeScript設定</h3>
+<h2 id="code-style">Code Style</h2>
+<h3 id="typescript-configuration">TypeScript Configuration</h3>
 <div class="sourceCode" id="cb2"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// tsconfig.json</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>{</span>
@@ -127,37 +130,38 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb2-
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;module&quot;</span><span class="op">:</span> <span class="st">&quot;commonjs&quot;</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="api開発">API開発</h2>
-<p>詳細なAPI仕様は <a href="./050-api-reference.html">API仕様</a>
-を参照してください。</p>
-<h3 id="データ管理api">データ管理API</h3>
-<p>カスタムAPIエンドポイントの作成方法：</p>
+<h2 id="api-development">API Development</h2>
+<p>For detailed API specifications, please refer to <a
+href="./050-api-reference.html">API Specification</a>.</p>
+<h3 id="data-management-api">Data Management API</h3>
+<p>How to create custom API endpoints:</p>
 <div class="sourceCode" id="cb3"><pre
-class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// カスタムエンドポイントの例</span></span>
+class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Example of custom endpoint</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">get</span>(<span class="st">&#39;/api/custom&#39;</span><span class="op">,</span> (req<span class="op">,</span> res) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 実装コード</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Implementation code</span></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
-<h2 id="パフォーマンス最適化">パフォーマンス最適化</h2>
+<h2 id="performance-optimization">Performance Optimization</h2>
 <figure>
-<img src="../images/performance-metrics.svg" alt="パフォーマンス指標" />
-<figcaption aria-hidden="true">パフォーマンス指標</figcaption>
+<img src="../images/performance-metrics.svg"
+alt="Performance Metrics" />
+<figcaption aria-hidden="true">Performance Metrics</figcaption>
 </figure>
-<h3 id="キャッシュ戦略">キャッシュ戦略</h3>
+<h3 id="caching-strategy">Caching Strategy</h3>
 <ul>
-<li>Redis によるセッションキャッシュ</li>
-<li>CDN による静的リソース配信</li>
+<li>Session caching with Redis</li>
+<li>Static resource delivery with CDN</li>
 </ul>
-<p>詳細なアーキテクチャは <a
-href="./040-architecture.html">アーキテクチャ</a> をご覧ください。</p>
-<h2 id="テスト">テスト</h2>
+<p>For detailed architecture, please see <a
+href="./040-architecture.html">Architecture</a>.</p>
+<h2 id="testing">Testing</h2>
 <div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ユニットテスト</span></span>
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Unit tests</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run test:unit</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 統合テスト</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Integration tests</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> run test:integration</span></code></pre></div>
-<h2 id="デバッグ">デバッグ</h2>
-<h3 id="ログ設定">ログ設定</h3>
+<h2 id="debugging">Debugging</h2>
+<h3 id="logging-configuration">Logging Configuration</h3>
 <div class="sourceCode" id="cb5"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// logger.ts</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> winston <span class="im">from</span> <span class="st">&#39;winston&#39;</span><span class="op">;</span></span>
@@ -181,7 +185,7 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb5-
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> logger<span class="op">;</span></span></code></pre></div>
-<h3 id="プロファイリング">プロファイリング</h3>
+<h3 id="profiling">Profiling</h3>
 <div class="sourceCode" id="cb6"><pre
 class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// performance.ts</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">class</span> PerformanceProfiler {</span>
@@ -202,22 +206,23 @@ class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb6-
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">process</span><span class="op">.</span><span class="fu">memoryUsage</span>()<span class="op">;</span></span>
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<h2 id="トラブルシューティング">トラブルシューティング</h2>
-<p>開発中の問題については、以下のリソースを確認してください：</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>For issues during development, please check the following
+resources:</p>
 <ul>
-<li><a href="./050-api-reference.html">API仕様</a>
-でエンドポイントの詳細を確認</li>
-<li><a href="./040-architecture.html">アーキテクチャ</a>
-でシステム構成を理解</li>
-<li><a href="./100-faq.html">FAQ</a> でよくある質問を確認</li>
+<li><a href="./050-api-reference.html">API Specification</a> for
+endpoint details</li>
+<li><a href="./040-architecture.html">Architecture</a> to understand
+system structure</li>
+<li><a href="./100-faq.html">FAQ</a> for common questions</li>
 </ul>
 <hr />
-<h2 id="ナビゲーション">ナビゲーション</h2>
+<h2 id="navigation">Navigation</h2>
 <ul>
-<li><a href="./010-README.html">🏠 ホーム</a></li>
-<li><a href="./040-architecture.html">🏗️ アーキテクチャ</a></li>
-<li><a href="./050-api-reference.html">🔧 API仕様</a></li>
-<li><a href="./080-user-guide.html">📚 ユーザーガイド</a></li>
+<li><a href="./010-README.html">🏠 Home</a></li>
+<li><a href="./040-architecture.html">🏗️ Architecture</a></li>
+<li><a href="./050-api-reference.html">🔧 API Specification</a></li>
+<li><a href="./080-user-guide.html">📚 User Guide</a></li>
 </ul>
 </body>
 </html>

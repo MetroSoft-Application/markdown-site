@@ -4,12 +4,11 @@
       <stop offset="0%" stop-color="#FF9500"/>
       <stop offset="100%" stop-color="#FF5722"/>
     </linearGradient>
-  </defs>
-  <rect width="800" height="200" fill="url(#troubleGrad)"/>
+  </defs>  <rect width="800" height="200" fill="url(#troubleGrad)"/>
   <text x="400" y="100" font-family="Arial, sans-serif" font-size="36" fill="white" text-anchor="middle" font-weight="bold">
-    トラブルシューティング
+    Troubleshooting
   </text>
   <text x="400" y="130" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.9)" text-anchor="middle">
-    問題解決・デバッグ・緊急時対応
+    Problem Solving • Debugging • Emergency Response
   </text>
 </svg>

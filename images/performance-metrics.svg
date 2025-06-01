@@ -1,15 +1,13 @@
 <svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
   <rect width="800" height="500" fill="#ffffff" stroke="#e9ecef" stroke-width="2"/>
-  
-  <!-- タイトル -->
+    <!-- タイトル -->
   <text x="400" y="30" font-family="Arial, sans-serif" font-size="24" fill="#495057" text-anchor="middle" font-weight="bold">
-    パフォーマンス指標ダッシュボード
+    Performance Metrics Dashboard
   </text>
-  
-  <!-- レスポンス時間グラフ -->
+    <!-- レスポンス時間グラフ -->
   <rect x="50" y="70" width="350" height="180" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="225" y="95" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    レスポンス時間 (ms)
+    Response Time (ms)
   </text>
   
   <!-- グラフの軸 -->
@@ -35,11 +33,10 @@
   <text x="70" y="225" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">0</text>
   <text x="70" y="180" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">50</text>
   <text x="70" y="140" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">100</text>
-  
-  <!-- CPU使用率 -->
+    <!-- CPU使用率 -->
   <rect x="450" y="70" width="300" height="180" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="600" y="95" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    CPU使用率
+    CPU Usage
   </text>
   
   <!-- CPU使用率バー -->
@@ -48,25 +45,22 @@
   <text x="600" y="140" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
     69%
   </text>
-  
-  <!-- メモリ使用率 -->
+    <!-- メモリ使用率 -->
   <rect x="470" y="170" width="260" height="30" fill="#e9ecef" rx="15"/>
   <rect x="470" y="170" width="130" height="30" fill="#ffc107" rx="15"/>
   <text x="600" y="190" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    メモリ: 50%
+    Memory: 50%
   </text>
-  
-  <!-- ディスク使用率 -->
+    <!-- ディスク使用率 -->
   <rect x="470" y="220" width="260" height="30" fill="#e9ecef" rx="15"/>
   <rect x="470" y="220" width="78" height="30" fill="#dc3545" rx="15"/>
   <text x="600" y="240" font-family="Arial, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="bold">
-    ディスク: 30%
+    Disk: 30%
   </text>
-  
-  <!-- スループット -->
+    <!-- スループット -->
   <rect x="50" y="280" width="350" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="225" y="305" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    スループット (req/sec)
+    Throughput (req/sec)
   </text>
   
   <!-- スループットメーター（円形） -->
@@ -78,20 +72,18 @@
   <text x="225" y="390" font-family="Arial, sans-serif" font-size="12" fill="#6c757d" text-anchor="middle">
     req/sec
   </text>
-  
-  <!-- エラー率 -->
+    <!-- エラー率 -->
   <rect x="450" y="280" width="300" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2" rx="8"/>
   <text x="600" y="305" font-family="Arial, sans-serif" font-size="16" fill="#495057" text-anchor="middle" font-weight="bold">
-    エラー率
+    Error Rate
   </text>
-  
-  <!-- エラー統計 -->
+    <!-- エラー統計 -->
   <rect x="470" y="330" width="80" height="80" fill="#e8f5e8" stroke="#28a745" stroke-width="2" rx="4"/>
   <text x="510" y="360" font-family="Arial, sans-serif" font-size="24" fill="#28a745" text-anchor="middle" font-weight="bold">
     99.9%
   </text>
   <text x="510" y="380" font-family="Arial, sans-serif" font-size="10" fill="#28a745" text-anchor="middle">
-    成功率
+    Success Rate
   </text>
   <text x="510" y="395" font-family="Arial, sans-serif" font-size="10" fill="#28a745" text-anchor="middle">
     (24h)
@@ -100,9 +92,8 @@
   <rect x="570" y="330" width="80" height="80" fill="#ffebee" stroke="#dc3545" stroke-width="2" rx="4"/>
   <text x="610" y="360" font-family="Arial, sans-serif" font-size="24" fill="#dc3545" text-anchor="middle" font-weight="bold">
     0.1%
-  </text>
-  <text x="610" y="380" font-family="Arial, sans-serif" font-size="10" fill="#dc3545" text-anchor="middle">
-    エラー率
+  </text>  <text x="610" y="380" font-family="Arial, sans-serif" font-size="10" fill="#dc3545" text-anchor="middle">
+    Error Rate
   </text>
   <text x="610" y="395" font-family="Arial, sans-serif" font-size="10" fill="#dc3545" text-anchor="middle">
     (24h)
@@ -111,16 +102,14 @@
   <rect x="670" y="330" width="80" height="80" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="4"/>
   <text x="710" y="360" font-family="Arial, sans-serif" font-size="24" fill="#ff9800" text-anchor="middle" font-weight="bold">
     12ms
-  </text>
-  <text x="710" y="380" font-family="Arial, sans-serif" font-size="10" fill="#ff9800" text-anchor="middle">
-    平均応答
+  </text>  <text x="710" y="380" font-family="Arial, sans-serif" font-size="10" fill="#ff9800" text-anchor="middle">
+    Average
   </text>
   <text x="710" y="395" font-family="Arial, sans-serif" font-size="10" fill="#ff9800" text-anchor="middle">
-    時間
+    Response Time
   </text>
-  
-  <!-- ステータス表示 -->
+    <!-- ステータス表示 -->
   <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="#28a745" text-anchor="middle" font-weight="bold">
-    システム正常稼働中 | 最終更新: 2024-01-15 14:30:00
+    System Operating Normally | Last Updated: 2024-01-15 14:30:00
   </text>
 </svg>

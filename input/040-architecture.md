@@ -1,48 +1,48 @@
-# 🏗️ アーキテクチャ
+# 🏗️ Architecture
 
-![アーキテクチャ図](../images/architecture-diagram.svg)
+![Architecture Diagram](../images/architecture-diagram.svg)
 
-## システム概要
+## System Overview
 
-このシステムは以下のコンポーネントで構成されています。
+This system consists of the following components.
 
-## コンポーネント構成
+## Component Structure
 
-### フロントエンド
-- React.js ベースのユーザーインターフェース
-- TypeScript による型安全性
+### Frontend
+- React.js-based user interface
+- Type safety with TypeScript
 
-### バックエンド
-- Node.js + Express サーバー
-- REST API エンドポイント
+### Backend
+- Node.js + Express server
+- REST API endpoints
 
-詳細なAPI仕様は [API仕様](./050-api-reference.html) を参照してください。
+For detailed API specifications, please refer to the [API Specification](./050-api-reference.md).
 
-### データベース
-- PostgreSQL によるデータ永続化
-- Redis によるキャッシュ機能
+### Database
+- Data persistence with PostgreSQL
+- Caching with Redis
 
-![データフロー図](../images/data-flow.svg)
+![Data Flow Diagram](../images/data-flow.svg)
 
-## セキュリティ
+## Security
 
-- JWT トークンによる認証
-- HTTPS 通信の強制
-- CORS ポリシーの適用
+- Authentication with JWT tokens
+- Enforced HTTPS communication
+- Applied CORS policies
 
-## パフォーマンス
+## Performance
 
-パフォーマンス最適化の詳細は [開発者ガイド](./070-developer-guide.html) を参照してください。
+For performance optimization details, please refer to the [Developer Guide](./070-developer-guide.md).
 
-## デプロイメント
+## Deployment
 
-システムのデプロイメント構成については、開発者ガイドを参照してください。
+For system deployment configuration, please refer to the Developer Guide.
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [📋 概要](./020-overview.html)
-- [🔧 API仕様](./050-api-reference.html)
-- [👥 開発者ガイド](./070-developer-guide.html)
+- [🏠 Home](./010-README.md)
+- [📋 Overview](./020-overview.md)
+- [🔧 API Specification](./050-api-reference.md)
+- [👥 Developer Guide](./070-developer-guide.md)

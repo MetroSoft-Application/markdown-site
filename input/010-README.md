@@ -1,31 +1,31 @@
-# ドキュメント構造
+# Document Structure
 
-このドキュメントは相互にリンクされた構造化されたマークダウンファイル群です。
+This document consists of interlinked, structured markdown files.
 
-![メインイメージ](../images/main-header.svg)
+![Main Image](../images/main-header.svg)
 
-## 📋 目次
+## 📋 Table of Contents
 
-### 📚 基本情報
-- [概要](./020-overview.html) - プロジェクトの概要と目的
-- [始め方](./030-getting-started.html) - セットアップと初期設定
+### 📚 Basic Information
+- [Overview](./020-overview.md) - Project overview and purpose
+- [Getting Started](./030-getting-started.md) - Setup and initial configuration
 
-### 🛠️ 技術情報
-- [アーキテクチャ](./040-architecture.html) - システム設計と構造
-- [API仕様](./050-api-reference.html) - API の詳細仕様
-- [設定](./060-configuration.html) - 各種設定方法
+### 🛠️ Technical Information
+- [Architecture](./040-architecture.md) - System design and structure
+- [API Specification](./050-api-reference.md) - Detailed API specifications
+- [Configuration](./060-configuration.md) - Configuration methods
 
-### 📖 ガイド
-- [ユーザーガイド](./080-user-guide.html) - エンドユーザー向けガイド
-- [開発者ガイド](./070-developer-guide.html) - 開発者向けガイド
-- [トラブルシューティング](./090-troubleshooting.html) - 問題解決方法
+### 📖 Guides
+- [User Guide](./080-user-guide.md) - End-user guide
+- [Developer Guide](./070-developer-guide.md) - Guide for developers
+- [Troubleshooting](./090-troubleshooting.md) - Problem-solving methods
 
-### 📝 その他
-- [FAQ](./100-faq.html) - よくある質問
-- [変更履歴](./changelog.md) - バージョン履歴
+### 📝 Other
+- [FAQ](./100-faq.md) - Frequently asked questions
+- [Changelog](./changelog.md) - Version history
 
 ---
 
-## 🔗 関連リンク
-- [プロジェクトホーム](./020-overview.html)
-- [クイックスタート](./030-getting-started.html)
+## 🔗 Related Links
+- [Project Home](./020-overview.md)
+- [Quick Start](./030-getting-started.md)

@@ -1,47 +1,47 @@
-# 📚 ユーザーガイド
+# 📚 User Guide
 
-このガイドでは、エンドユーザー向けの基本的な操作方法を説明します。
+This guide explains basic operations for end users.
 
-## 基本操作
+## Basic Operations
 
-### ログイン
+### Login
 
-1. ホーム画面でログインボタンをクリック
-2. 認証情報を入力
-3. ダッシュボードへ移動
+1. Click the login button on the home screen
+2. Enter your authentication information
+3. Navigate to the dashboard
 
-### ダッシュボードの使い方
+### How to Use the Dashboard
 
-ダッシュボードでは以下の操作が可能です：
+The dashboard allows you to:
 
-- 📊 データの表示と分析
-- 📝 新しいエントリの作成
-- 🔍 既存データの検索
+- 📊 View and analyze data
+- 📝 Create new entries
+- 🔍 Search existing data
 
-### データの管理
+### Data Management
 
-#### データの作成
+#### Creating Data
 
-1. 「新規作成」ボタンをクリック
-2. 必要な情報を入力
-3. 「保存」ボタンで確定
+1. Click the "Create New" button
+2. Enter the required information
+3. Confirm with the "Save" button
 
-#### データの編集
+#### Editing Data
 
-詳細な編集機能については [開発者ガイド](./070-developer-guide.html#データ編集) も参照してください。
+For detailed editing features, please also refer to the [Developer Guide](./070-developer-guide.md#data-editing).
 
-## よくある操作
+## Common Operations
 
-問題が発生した場合は：
+If you encounter issues:
 
-- [FAQ](./100-faq.html) で一般的な質問を確認
-- [トラブルシューティング](./090-troubleshooting.html) で解決方法を検索
+- Check [FAQ](./100-faq.md) for common questions
+- Search for solutions in [Troubleshooting](./090-troubleshooting.md)
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [👨‍💻 開発者ガイド](./070-developer-guide.html)
-- [❓ FAQ](./100-faq.html)
-- [🔧 トラブルシューティング](./090-troubleshooting.html)
+- [🏠 Home](./010-README.md)
+- [👨‍💻 Developer Guide](./070-developer-guide.md)
+- [❓ FAQ](./100-faq.md)
+- [🔧 Troubleshooting](./090-troubleshooting.md)

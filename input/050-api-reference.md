@@ -1,80 +1,80 @@
-# 🔧 API仕様
+# 🔧 API Specification
 
-![API仕様](../images/api-reference.svg)
+![API Specification](../images/api-reference.svg)
 
-このドキュメントでは、REST API の詳細仕様を説明します。
+This document describes the detailed specifications of the REST API.
 
-## ベースURL
+## Base URL
 
 ```
 https://api.example.com/v1
 ```
 
-## 認証
+## Authentication
 
-すべてのAPIエンドポイントはJWTトークンによる認証が必要です。
+All API endpoints require authentication with a JWT token.
 
 ```http
 Authorization: Bearer {your-jwt-token}
 ```
 
-## エンドポイント一覧
+## Endpoint List
 
-### ユーザー管理
+### User Management
 
 #### GET /users
 
-ユーザー一覧を取得します。
+Retrieves a list of users.
 
 ```http
 GET /users
 ```
 
-**レスポンス例:**
+**Response Example:**
 
 ```json
 {
   "users": [
     {
       "id": 1,
-      "name": "太郎",
-      "email": "taro@example.com"
+      "name": "John",
+      "email": "john@example.com"
     }
   ]
 }
 ```
 
-![APIレスポンス例](../images/api-response-example.svg)
+![API Response Example](../images/api-response-example.svg)
 
 #### POST /users
 
-新しいユーザーを作成します。
+Creates a new user.
 
 ```http
 POST /users
 Content-Type: application/json
 
 {
-  "name": "花子",
-  "email": "hanako@example.com"
+  "name": "Jane",
+  "email": "jane@example.com"
 }
 ```
 
-### データ管理
+### Data Management
 
-詳細なデータ管理方法は [開発者ガイド](./070-developer-guide.html) を参照してください。
+For detailed data management methods, please refer to the [Developer Guide](./070-developer-guide.md).
 
-## エラーハンドリング
+## Error Handling
 
-APIエラーの詳細は [トラブルシューティング](./090-troubleshooting.html#APIエラー) をご覧ください。
+For details on API errors, please see [Troubleshooting](./090-troubleshooting.md#api-errors).
 
-![エラーコード一覧](../images/error-codes.svg)
+![Error Code List](../images/error-codes.svg)
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [🏗️ アーキテクチャ](./040-architecture.html)
-- [👨‍💻 開発者ガイド](./070-developer-guide.html)
-- [🔧 トラブルシューティング](./090-troubleshooting.html)
+- [🏠 Home](./010-README.md)
+- [🏗️ Architecture](./040-architecture.md)
+- [👨‍💻 Developer Guide](./070-developer-guide.md)
+- [🔧 Troubleshooting](./090-troubleshooting.md)

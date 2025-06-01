@@ -1,212 +1,212 @@
-# 🔧 トラブルシューティング
+# 🔧 Troubleshooting
 
-![トラブルシューティング](../images/troubleshooting.svg)
+![Troubleshooting](../images/troubleshooting.svg)
 
-よくある問題と解決方法をまとめています。
+This page summarizes common issues and their solutions.
 
-## 一般的な問題
+## Common Issues
 
-### サーバーが起動しない
+### Server Won't Start
 
-**症状**: `npm start` でエラーが発生する
+**Symptom**: Error occurs with `npm start`
 
-**解決方法**:
-1. Node.js のバージョンを確認 (`node --version`)
-2. 依存関係を再インストール (`npm install`)
-3. 環境変数を確認 ([設定](./060-configuration.html) を参照)
+**Solution**:
+1. Check Node.js version (`node --version`)
+2. Reinstall dependencies (`npm install`)
+3. Verify environment variables (refer to [Configuration](./060-configuration.md))
 
 ```bash
-# 依存関係のクリーンインストール
+# Clean install of dependencies
 rm -rf node_modules package-lock.json
 npm install
 ```
 
-### データベース接続エラー
+### Database Connection Error
 
-**症状**: `Database connection failed`
+**Symptom**: `Database connection failed`
 
-**解決方法**:
-1. PostgreSQL が起動しているか確認
-2. 接続文字列を確認
-3. ファイアウォール設定を確認
+**Solution**:
+1. Verify PostgreSQL is running
+2. Check connection string
+3. Verify firewall settings
 
 ```bash
-# PostgreSQL の状態確認
+# Check PostgreSQL status
 systemctl status postgresql
 
-# 接続テスト
+# Test connection
 psql -h localhost -U username -d database_name
 ```
 
-## 開発環境の問題
+## Development Environment Issues
 
-### Hot Reload が動作しない
+### Hot Reload Not Working
 
-**解決方法**:
-1. ファイル監視の設定を確認
-2. ポート競合がないか確認
-3. 開発サーバーを再起動
+**Solution**:
+1. Check file watching settings
+2. Look for port conflicts
+3. Restart development server
 
 ```bash
-# 開発サーバーの再起動
+# Restart development server
 npm run dev
 ```
 
-### ビルドエラー
+### Build Errors
 
-**症状**: TypeScript コンパイルエラー
+**Symptom**: TypeScript compilation errors
 
-**解決方法**:
-1. `tsconfig.json` の設定を確認
-2. 型定義ファイルを更新
-3. キャッシュをクリア
+**Solution**:
+1. Check `tsconfig.json` settings
+2. Update type definition files
+3. Clear cache
 
 ```bash
-# TypeScript キャッシュクリア
+# Clear TypeScript cache
 rm -rf dist/ .tscache/
 npm run build
 ```
 
-## APIエラー
+## API Errors
 
 ### 401 Unauthorized
 
-**原因**: 認証トークンの問題
+**Cause**: Authentication token issues
 
-**解決方法**:
-1. トークンの有効期限を確認
-2. JWT シークレットキーを確認
-3. 再ログインを実行
+**Solution**:
+1. Check token expiration
+2. Verify JWT secret key
+3. Re-login
 
 ### 404 Not Found
 
-**原因**: エンドポイントが存在しない
+**Cause**: Endpoint does not exist
 
-**解決方法**:
-1. [API仕様](./050-api-reference.html) でエンドポイントを確認
-2. ルーティング設定を確認
-3. サーバーログを確認
+**Solution**:
+1. Check the endpoint in [API Specification](./050-api-reference.md)
+2. Verify routing configuration
+3. Check server logs
 
 ### 500 Internal Server Error
 
-**原因**: サーバー内部エラー
+**Cause**: Internal server error
 
-**解決方法**:
-1. サーバーログを確認
-2. データベース接続を確認
-3. エラースタックトレースを分析
+**Solution**:
+1. Check server logs
+2. Verify database connection
+3. Analyze error stack trace
 
 ```bash
-# ログファイルの確認
+# Check log files
 tail -f logs/error.log
 ```
 
-## パフォーマンス問題
+## Performance Issues
 
-### レスポンスが遅い
+### Slow Response
 
-**解決方法**:
-1. データベースクエリを最適化
-2. キャッシュ設定を確認
-3. [パフォーマンス最適化](./070-developer-guide.html#パフォーマンス最適化) を参照
+**Solution**:
+1. Optimize database queries
+2. Check cache settings
+3. Refer to [Performance Optimization](./070-developer-guide.md#performance-optimization)
 
-### メモリ使用量が多い
+### High Memory Usage
 
-**解決方法**:
-1. メモリリークを確認
-2. キャッシュサイズを調整
-3. 不要なプロセスを終了
+**Solution**:
+1. Check for memory leaks
+2. Adjust cache size
+3. Terminate unnecessary processes
 
 ```bash
-# メモリ使用量の確認
+# Check memory usage
 ps aux --sort=-%mem | head -10
 ```
 
-## ネットワーク問題
+## Network Issues
 
-### 接続タイムアウト
+### Connection Timeout
 
-**解決方法**:
-1. ネットワーク接続を確認
-2. プロキシ設定を確認
-3. DNSの動作を確認
+**Solution**:
+1. Check network connection
+2. Verify proxy settings
+3. Check DNS operation
 
 ```bash
-# 接続テスト
+# Test connection
 curl -I http://localhost:3000/health
 ```
 
-## Docker関連の問題
+## Docker Related Issues
 
-### コンテナが起動しない
+### Container Won't Start
 
-**解決方法**:
-1. Dockerファイルの構文を確認
-2. ベースイメージを確認
-3. ポートマッピングを確認
+**Solution**:
+1. Check Dockerfile syntax
+2. Verify base image
+3. Check port mapping
 
 ```bash
-# コンテナログの確認
+# Check container logs
 docker logs container_name
 
-# コンテナの状態確認
+# Check container status
 docker ps -a
 ```
 
-## ログとデバッグ
+## Logging and Debugging
 
-### ログレベルの調整
+### Adjusting Log Level
 
 ```bash
-# 環境変数でログレベルを設定
+# Set log level with environment variable
 export LOG_LEVEL=debug
 npm start
 ```
 
-### デバッグモードの有効化
+### Enabling Debug Mode
 
 ```bash
-# デバッグモードで起動
+# Start with debug mode
 DEBUG=* npm run dev
 ```
 
-## 緊急時の対応
+## Emergency Response
 
-### システム復旧手順
+### System Recovery Procedure
 
-1. **バックアップからの復元**
+1. **Restore from Backup**
    ```bash
-   # データベース復元
+   # Database restoration
    pg_restore -d database_name backup_file.sql
    ```
 
-2. **ログの確認**
+2. **Check Logs**
    ```bash
-   # エラーログの確認
+   # Check error logs
    grep -i error logs/*.log
    ```
 
-3. **システム状態の確認**
+3. **Check System Status**
    ```bash
-   # プロセス確認
+   # Check processes
    ps aux | grep node
-   # ポート使用状況
+   # Check port usage
    netstat -tulpn | grep :3000
    ```
 
-## サポート情報
+## Support Information
 
-問題が解決しない場合:
+If the issue isn't resolved:
 
-1. [FAQ](./100-faq.html) を確認
-2. [開発者ガイド](./070-developer-guide.html) を参照
-3. ログファイルを添付してサポートに連絡
+1. Check [FAQ](./100-faq.md)
+2. Refer to [Developer Guide](./070-developer-guide.md)
+3. Contact support with log files attached
 
 ---
 
-## ナビゲーション
+## Navigation
 
-- [🏠 ホーム](./010-README.html)
-- [⚙️ 設定](./060-configuration.html)
-- [🔧 API仕様](./050-api-reference.html)
-- [❓ FAQ](./100-faq.html)
+- [🏠 Home](./010-README.md)
+- [⚙️ Configuration](./060-configuration.md)
+- [🔧 API Specification](./050-api-reference.md)
+- [❓ FAQ](./100-faq.md)

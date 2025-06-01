@@ -1,36 +1,31 @@
 <svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
   <rect width="600" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
-  
-  <!-- タイトル -->
+    <!-- タイトル -->
   <text x="300" y="30" font-family="Arial, sans-serif" font-size="24" fill="#212529" text-anchor="middle" font-weight="bold">
-    プロジェクト概要
+    Project Overview
   </text>
-  
-  <!-- コンポーネント1: ドキュメント管理 -->
+    <!-- コンポーネント1: ドキュメント管理 -->
   <rect x="50" y="80" width="150" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="10"/>
   <text x="125" y="115" font-family="Arial, sans-serif" font-size="14" fill="#1976d2" text-anchor="middle" font-weight="bold">
-    📄 ドキュメント
+    📄 Document
   </text>
   <text x="125" y="135" font-family="Arial, sans-serif" font-size="14" fill="#1976d2" text-anchor="middle">
-    管理システム
+    Management System
   </text>
-  
-  <!-- コンポーネント2: 相互リンク -->
+    <!-- コンポーネント2: 相互リンク -->
   <rect x="225" y="80" width="150" height="80" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="10"/>
   <text x="300" y="115" font-family="Arial, sans-serif" font-size="14" fill="#388e3c" text-anchor="middle" font-weight="bold">
-    🔗 相互リンク
+    🔗 Cross-linking
   </text>
   <text x="300" y="135" font-family="Arial, sans-serif" font-size="14" fill="#388e3c" text-anchor="middle">
-    ナビゲーション
+    Navigation
   </text>
-  
-  <!-- コンポーネント3: 視覚化 -->
+    <!-- コンポーネント3: 視覚化 -->
   <rect x="400" y="80" width="150" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="10"/>
   <text x="475" y="115" font-family="Arial, sans-serif" font-size="14" fill="#f57c00" text-anchor="middle" font-weight="bold">
-    🖼️ 視覚化
-  </text>
-  <text x="475" y="135" font-family="Arial, sans-serif" font-size="14" fill="#f57c00" text-anchor="middle">
-    図解・画像
+    🖼️ Visualization
+  </text>  <text x="475" y="135" font-family="Arial, sans-serif" font-size="14" fill="#f57c00" text-anchor="middle">
+    Diagrams &amp; Images
   </text>
   
   <!-- 矢印と接続線 -->
@@ -38,21 +33,20 @@
   <path d="M 375 120 L 400 120" stroke="#6c757d" stroke-width="2" marker-end="url(#arrowhead)"/>
   
   <!-- 下部の説明 -->
-  <rect x="50" y="200" width="500" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
-  <text x="300" y="230" font-family="Arial, sans-serif" font-size="16" fill="#212529" text-anchor="middle" font-weight="bold">
-    主な特徴
+  <rect x="50" y="200" width="500" height="150" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>  <text x="300" y="230" font-family="Arial, sans-serif" font-size="16" fill="#212529" text-anchor="middle" font-weight="bold">
+    Key Features
   </text>
   <text x="70" y="260" font-family="Arial, sans-serif" font-size="12" fill="#495057">
-    ✅ 構造化されたマークダウンファイル
+    ✅ Structured Markdown Files
   </text>
   <text x="70" y="280" font-family="Arial, sans-serif" font-size="12" fill="#495057">
-    ✅ クロスリファレンス機能
+    ✅ Cross-reference Functionality
   </text>
   <text x="70" y="300" font-family="Arial, sans-serif" font-size="12" fill="#495057">
-    ✅ インタラクティブなナビゲーション
+    ✅ Interactive Navigation
   </text>
   <text x="70" y="320" font-family="Arial, sans-serif" font-size="12" fill="#495057">
-    ✅ 視覚的な図解とイメージ
+    ✅ Visual Diagrams and Images
   </text>
   
   <!-- 矢印の定義 -->
