@@ -26,12 +26,10 @@ Get-ChildItem "$InputFolder\*.md" | ForEach-Object {
     $mdPath = $_.FullName
     $baseName = $_.BaseName
     $htmlFile = Join-Path $OutputFolder "$baseName.html"
-
-    # UTF-8（BOMなし）で読み取り
     $content = Get-Content $mdPath -Encoding UTF8 -Raw
 
-    # .md → .html のリンク置換
-    $convertedContent = $content -replace '\(([^)]+)\.md\)', '($1.html)'
+    # .md → .html のリンク置換（アンカーリンク#を保持）
+    $convertedContent = $content -replace '\(([^)]+)\.md(#[^)]*)?(\))', '($1.html$2$3)'
 
     # 一時ファイル保存（BOMなし）
     $tempPath = [System.IO.Path]::GetTempFileName()
