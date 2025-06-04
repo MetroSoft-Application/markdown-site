@@ -27,9 +27,8 @@ Get-ChildItem "$InputFolder\*.md" | ForEach-Object {
     $baseName = $_.BaseName
     $htmlFile = Join-Path $OutputFolder "$baseName.html"
     $content = Get-Content $mdPath -Encoding UTF8 -Raw
-
     # .md → .html のリンク置換（アンカーリンク#を保持）
-    $convertedContent = $content -replace '\(([^)]+)\.md(#[^)]*)?(\))', '($1.html$2$3)'
+    $convertedContent = $content -replace '\(([^)]+)\.md(#[^)]*)?\)', '($1.html$2)'
 
     # 一時ファイル保存（BOMなし）
     $tempPath = [System.IO.Path]::GetTempFileName()
